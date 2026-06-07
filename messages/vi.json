@@ -1,0 +1,110 @@
+{
+  "nav": {
+    "home": "Trang Chủ",
+    "about": "Giới Thiệu",
+    "projects": "Dự Án",
+    "services": "Dịch Vụ",
+    "blog": "Tin Tức",
+    "contact": "Liên Hệ",
+    "getQuote": "Yêu Cầu Báo Giá"
+  },
+  "home": {
+    "heroTagline": "Kiến Tạo Công Trình Bền Vững",
+    "heroSubtitle": "Chuyên xây dựng nhà xưởng công nghiệp, biệt thự, cơ sở hạ tầng tại Bà Rịa - Vũng Tàu",
+    "viewProjects": "Xem Dự Án",
+    "contactUs": "Liên Hệ Ngay",
+    "stats": {
+      "years": "Năm Kinh Nghiệm",
+      "projects": "Dự Án Hoàn Thành",
+      "services": "Lĩnh Vực Dịch Vụ",
+      "clients": "Khách Hàng"
+    },
+    "servicesTitle": "Dịch Vụ Của Chúng Tôi",
+    "servicesSubtitle": "Cung cấp giải pháp xây dựng toàn diện cho mọi công trình",
+    "projectsTitle": "Dự Án Nổi Bật",
+    "projectsSubtitle": "Những công trình tiêu biểu chúng tôi đã thực hiện",
+    "whyTitle": "Tại Sao Chọn Chúng Tôi",
+    "why": {
+      "professional": {
+        "title": "Chuyên Nghiệp",
+        "desc": "Hơn 15 năm kinh nghiệm trong xây dựng công nghiệp và dân dụng"
+      },
+      "quality": {
+        "title": "Chất Lượng",
+        "desc": "Cam kết uy tín, chất lượng và giá cả hợp lý cho mọi công trình"
+      },
+      "innovation": {
+        "title": "Sáng Tạo",
+        "desc": "Liên tục nghiên cứu công nghệ hiện đại để đưa ra giải pháp tối ưu"
+      },
+      "support": {
+        "title": "Hỗ Trợ",
+        "desc": "Bảo hành và hỗ trợ sau công trình chu đáo, tận tâm"
+      }
+    },
+    "testimonialsTitle": "Khách Hàng Nói Gì",
+    "clientsTitle": "Đối Tác & Khách Hàng",
+    "ctaBanner": "Sẵn Sàng Bắt Đầu Dự Án?",
+    "ctaDesc": "Liên hệ ngay để nhận tư vấn và báo giá miễn phí",
+    "ctaButton": "Yêu Cầu Báo Giá"
+  },
+  "about": {
+    "title": "Giới Thiệu Công Ty",
+    "subtitle": "Xây Dựng Mạnh Hùng - 15 Năm Khẳng Định Uy Tín",
+    "historyTitle": "Lịch Sử Phát Triển",
+    "missionTitle": "Sứ Mệnh",
+    "visionTitle": "Tầm Nhìn",
+    "valuesTitle": "Giá Trị Cốt Lõi",
+    "workflowTitle": "Quy Trình Làm Việc"
+  },
+  "projects": {
+    "title": "Dự Án Đã Thực Hiện",
+    "subtitle": "Tổng hợp các công trình tiêu biểu của Mạnh Hùng",
+    "all": "Tất Cả",
+    "industrial": "Công Nghiệp",
+    "residential": "Dân Dụng",
+    "infrastructure": "Hạ Tầng",
+    "maintenance": "Bảo Trì",
+    "searchPlaceholder": "Tìm kiếm dự án...",
+    "client": "Chủ Đầu Tư",
+    "year": "Năm",
+    "location": "Địa Điểm",
+    "category": "Hạng Mục",
+    "relatedProjects": "Dự Án Liên Quan"
+  },
+  "services": {
+    "title": "Dịch Vụ",
+    "subtitle": "Giải Pháp Xây Dựng Toàn Diện",
+    "learnMore": "Tìm Hiểu Thêm",
+    "requestQuote": "Yêu Cầu Báo Giá"
+  },
+  "blog": {
+    "title": "Tin Tức",
+    "subtitle": "Cập nhật kiến thức và thông tin xây dựng",
+    "readMore": "Đọc Thêm",
+    "recentPosts": "Bài Viết Gần Đây"
+  },
+  "contact": {
+    "title": "Liên Hệ",
+    "subtitle": "Chúng tôi luôn sẵn sàng hỗ trợ bạn",
+    "address": "Địa Chỉ",
+    "phone": "Điện Thoại",
+    "email": "Email",
+    "hours": "Giờ Làm Việc",
+    "hoursValue": "Thứ 2 - Thứ 6: 8:00 - 18:00",
+    "formName": "Họ Tên",
+    "formEmail": "Email",
+    "formSubject": "Tiêu Đề",
+    "formMessage": "Nội Dung",
+    "formSend": "Gửi Tin Nhắn",
+    "formSuccess": "Tin nhắn đã được gửi thành công!"
+  },
+  "footer": {
+    "company": "Công Ty TNHH Xây Dựng Mạnh Hùng",
+    "taxId": "MST: 3501306114",
+    "rights": "© 2009-2025 Mạnh Hùng. Bảo lưu mọi quyền.",
+    "services": "Dịch Vụ",
+    "contact": "Thông Tin Liên Hệ",
+    "followUs": "Theo Dõi Chúng Tôi"
+  }
+}

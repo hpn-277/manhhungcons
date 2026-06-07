@@ -1,0 +1,110 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "services": "Services",
+    "blog": "News",
+    "contact": "Contact",
+    "getQuote": "Get a Quote"
+  },
+  "home": {
+    "heroTagline": "Building Lasting Structures",
+    "heroSubtitle": "Specializing in industrial facilities, villas, and infrastructure in Ba Ria - Vung Tau",
+    "viewProjects": "View Projects",
+    "contactUs": "Contact Us",
+    "stats": {
+      "years": "Years of Experience",
+      "projects": "Completed Projects",
+      "services": "Service Areas",
+      "clients": "Clients"
+    },
+    "servicesTitle": "Our Services",
+    "servicesSubtitle": "Comprehensive construction solutions for every project",
+    "projectsTitle": "Featured Projects",
+    "projectsSubtitle": "Representative works we have completed",
+    "whyTitle": "Why Choose Us",
+    "why": {
+      "professional": {
+        "title": "Professional",
+        "desc": "Over 15 years of experience in industrial and civil construction"
+      },
+      "quality": {
+        "title": "Quality",
+        "desc": "Committed to reputation, quality, and competitive pricing for every project"
+      },
+      "innovation": {
+        "title": "Innovation",
+        "desc": "Continuously researching modern technologies to deliver optimal solutions"
+      },
+      "support": {
+        "title": "Support",
+        "desc": "Dedicated post-project warranty and support services"
+      }
+    },
+    "testimonialsTitle": "What Clients Say",
+    "clientsTitle": "Partners & Clients",
+    "ctaBanner": "Ready to Start Your Project?",
+    "ctaDesc": "Contact us now for free consultation and quotation",
+    "ctaButton": "Request a Quote"
+  },
+  "about": {
+    "title": "About Us",
+    "subtitle": "Manh Hung Construction - 15 Years of Proven Expertise",
+    "historyTitle": "Our History",
+    "missionTitle": "Mission",
+    "visionTitle": "Vision",
+    "valuesTitle": "Core Values",
+    "workflowTitle": "Our Process"
+  },
+  "projects": {
+    "title": "Our Projects",
+    "subtitle": "A showcase of Manh Hung's representative works",
+    "all": "All",
+    "industrial": "Industrial",
+    "residential": "Residential",
+    "infrastructure": "Infrastructure",
+    "maintenance": "Maintenance",
+    "searchPlaceholder": "Search projects...",
+    "client": "Client",
+    "year": "Year",
+    "location": "Location",
+    "category": "Category",
+    "relatedProjects": "Related Projects"
+  },
+  "services": {
+    "title": "Services",
+    "subtitle": "Comprehensive Construction Solutions",
+    "learnMore": "Learn More",
+    "requestQuote": "Request a Quote"
+  },
+  "blog": {
+    "title": "News",
+    "subtitle": "Construction knowledge and updates",
+    "readMore": "Read More",
+    "recentPosts": "Recent Posts"
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "We are always ready to assist you",
+    "address": "Address",
+    "phone": "Phone",
+    "email": "Email",
+    "hours": "Business Hours",
+    "hoursValue": "Mon - Fri: 8:00 AM - 6:00 PM",
+    "formName": "Full Name",
+    "formEmail": "Email",
+    "formSubject": "Subject",
+    "formMessage": "Message",
+    "formSend": "Send Message",
+    "formSuccess": "Message sent successfully!"
+  },
+  "footer": {
+    "company": "Manh Hung Construction Co., Ltd.",
+    "taxId": "Tax ID: 3501306114",
+    "rights": "© 2009-2025 Manh Hung. All rights reserved.",
+    "services": "Services",
+    "contact": "Contact Info",
+    "followUs": "Follow Us"
+  }
+}
