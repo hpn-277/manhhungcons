@@ -35,25 +35,28 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? "bg-white shadow-md py-2"
-          : "bg-transparent py-4"
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
+        ? "bg-white shadow-md py-2"
+        : "bg-white shadow-sm py-2"
+        }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-3">
-          <div className="w-10 h-10 bg-orange-500 rounded flex items-center justify-center">
-            <span className="text-white font-black text-sm">MH</span>
-          </div>
-          <span
+          <Image
+            src="/logo.jpg"
+            alt="Xây Dựng Mạnh Hùng"
+            width={150}
+            height={150}
+            className="rounded object-contain"
+          />
+          {/* <span
             className={`font-bold text-lg leading-tight hidden sm:block ${
               scrolled ? "text-gray-900" : "text-white"
             }`}
           >
             Xây Dựng<br />
             <span className="text-orange-500">Mạnh Hùng</span>
-          </span>
+          </span> */}
         </Link>
 
         {/* Desktop nav */}
@@ -62,9 +65,7 @@ export default function Navbar() {
             <Link
               key={link.href}
               href={link.href}
-              className={`text-sm font-medium transition-colors hover:text-orange-500 ${
-                scrolled ? "text-gray-800" : "text-white"
-              }`}
+              className="text-sm font-medium text-gray-800 transition-colors hover:text-orange-500"
             >
               {link.label}
             </Link>
@@ -74,11 +75,7 @@ export default function Navbar() {
         <div className="flex items-center gap-3">
           <button
             onClick={toggleLocale}
-            className={`text-sm font-semibold px-3 py-1 rounded border transition-colors ${
-              scrolled
-                ? "border-gray-300 text-gray-700 hover:border-orange-500 hover:text-orange-500"
-                : "border-white/50 text-white hover:border-orange-400 hover:text-orange-400"
-            }`}
+            className="text-sm font-semibold px-3 py-1 rounded border transition-colors border-gray-300 text-gray-700 hover:border-orange-500 hover:text-orange-500"
           >
             {locale === "vi" ? "EN" : "VI"}
           </button>
@@ -96,9 +93,9 @@ export default function Navbar() {
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label="Toggle menu"
           >
-            <div className={`w-6 h-0.5 mb-1.5 transition-all ${scrolled ? "bg-gray-800" : "bg-white"}`} />
-            <div className={`w-6 h-0.5 mb-1.5 transition-all ${scrolled ? "bg-gray-800" : "bg-white"}`} />
-            <div className={`w-6 h-0.5 transition-all ${scrolled ? "bg-gray-800" : "bg-white"}`} />
+            <div className="w-6 h-0.5 mb-1.5 bg-gray-800" />
+            <div className="w-6 h-0.5 mb-1.5 bg-gray-800" />
+            <div className="w-6 h-0.5 bg-gray-800" />
           </button>
         </div>
       </div>

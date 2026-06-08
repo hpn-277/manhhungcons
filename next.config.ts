@@ -7,14 +7,6 @@ const nextConfig: NextConfig = {
   turbopack: {
     root: process.cwd(),
   },
-  images: {
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "xaydungmanhhung.vn",
-      },
-    ],
-  },
 };
 
 export default withNextIntl(nextConfig);

@@ -1,9 +1,11 @@
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
+import Image from "next/image";
+import { FaFacebook } from "react-icons/fa";
+import { MdLocationOn, MdPhone, MdEmail, MdAccessTime } from "react-icons/md";
 
 export default function Footer() {
   const t = useTranslations("footer");
-  const nav = useTranslations("nav");
 
   const services = [
     { href: "/dich-vu/sua-chua-bao-tri", label: "Sửa Chữa & Bảo Trì" },
@@ -19,9 +21,13 @@ export default function Footer() {
         {/* Brand */}
         <div>
           <div className="flex items-center gap-3 mb-4">
-            <div className="w-10 h-10 bg-orange-500 rounded flex items-center justify-center">
-              <span className="text-white font-black text-sm">MH</span>
-            </div>
+            <Image
+              src="/logo.jpg"
+              alt="Xây Dựng Mạnh Hùng"
+              width={44}
+              height={44}
+              className="rounded object-contain"
+            />
             <span className="text-white font-bold text-lg">Xây Dựng Mạnh Hùng</span>
           </div>
           <p className="text-sm text-gray-400 leading-relaxed mb-4">
@@ -31,12 +37,12 @@ export default function Footer() {
           </p>
           <div className="flex gap-3">
             <a
-              href="https://www.facebook.com/xaydungmanhhung"
+              href="https://www.facebook.com/manhhungconstructor"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-8 h-8 bg-blue-600 rounded flex items-center justify-center text-white text-xs font-bold hover:bg-blue-700 transition-colors"
+              className="w-9 h-9 bg-blue-600 rounded flex items-center justify-center text-white hover:bg-blue-700 transition-colors"
             >
-              f
+              <FaFacebook size={20} />
             </a>
           </div>
         </div>
@@ -66,24 +72,24 @@ export default function Footer() {
             {t("contact")}
           </h3>
           <ul className="space-y-3 text-sm text-gray-400">
-            <li className="flex gap-2">
-              <span className="text-orange-500 mt-0.5">📍</span>
+            <li className="flex gap-2 items-start">
+              <MdLocationOn className="text-orange-500 mt-0.5 shrink-0" size={18} />
               <span>Thị Xã Phú Mỹ, Bà Rịa - Vũng Tàu</span>
             </li>
-            <li className="flex gap-2">
-              <span className="text-orange-500">📞</span>
+            <li className="flex gap-2 items-center">
+              <MdPhone className="text-orange-500 shrink-0" size={18} />
               <a href="tel:0984781709" className="hover:text-orange-400 transition-colors">
                 0984 781 709
               </a>
             </li>
-            <li className="flex gap-2">
-              <span className="text-orange-500">✉️</span>
+            <li className="flex gap-2 items-center">
+              <MdEmail className="text-orange-500 shrink-0" size={18} />
               <a href="mailto:manhhungcons@gmail.com" className="hover:text-orange-400 transition-colors">
                 manhhungcons@gmail.com
               </a>
             </li>
-            <li className="flex gap-2">
-              <span className="text-orange-500">🕐</span>
+            <li className="flex gap-2 items-center">
+              <MdAccessTime className="text-orange-500 shrink-0" size={18} />
               <span>Thứ 2 - Thứ 7: 7:00 - 18:00</span>
             </li>
           </ul>

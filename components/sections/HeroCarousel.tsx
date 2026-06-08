@@ -2,21 +2,21 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import { useTranslations, useLocale } from "next-intl";
+import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 
 const slides = [
   {
-    src: "https://xaydungmanhhung.vn/wp-content/uploads/2017/08/nha-kho-cang-go-dau-b.jpg",
-    alt: "Nhà kho cảng Gò Dầu",
+    src: "/images/2019-05-CONG-NHA-THO-LANG-CAT-1-540x415.jpg",
+    alt: "Cổng nhà thờ giáo xứ Láng Cát",
   },
   {
-    src: "https://xaydungmanhhung.vn/wp-content/uploads/2017/08/khu-biet-thu-chau-pha.jpg",
-    alt: "Khu biệt thự Châu Pha",
+    src: "/images/2019-05-DSC00173-540x405.jpg",
+    alt: "Khu biệt thự sinh thái Châu Pha",
   },
   {
-    src: "https://xaydungmanhhung.vn/wp-content/uploads/2017/08/nha-xuong-cong-nghiep.jpg",
-    alt: "Nhà xưởng công nghiệp",
+    src: "/images/2019-07-4-Copy-1.jpg",
+    alt: "Công trình xây dựng Mạnh Hùng",
   },
 ];
 
@@ -45,7 +45,7 @@ export default function HeroCarousel() {
             src={slide.src}
             alt={slide.alt}
             fill
-            className="object-cover opacity-50"
+            className="object-cover opacity-75"
             priority={i === 0}
             unoptimized
           />
