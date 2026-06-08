@@ -4,6 +4,7 @@ import { useLocale, useTranslations } from "next-intl";
 import { getProject, getProjects } from "@/lib/content";
 import { Link } from "@/i18n/navigation";
 import ProjectCard from "@/components/ui/ProjectCard";
+import ProjectCarousel from "@/components/ui/ProjectCarousel";
 import type { Metadata } from "next";
 
 interface Props {
@@ -72,54 +73,60 @@ export default async function ProjectDetailPage({ params }: Props) {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             {/* Content */}
             <div className="lg:col-span-2">
-              {/* Photo gallery */}
-              {frontmatter.images?.length > 0 && (
-                <div className="grid grid-cols-2 md:grid-cols-3 gap-3 mb-10">
-                  {frontmatter.images.map((src, i) => (
-                    <div key={i} className="relative aspect-[4/3] rounded-lg overflow-hidden bg-gray-100">
-                      <Image
-                        src={src}
-                        alt={`${frontmatter.title} ${i + 1}`}
-                        fill
-                        className="object-cover hover:scale-105 transition-transform duration-300"
-                        unoptimized
-                      />
-                    </div>
-                  ))}
-                </div>
+              <ProjectCarousel images={frontmatter.images ?? []} title={frontmatter.title} />
+
+              {frontmatter.excerpt && (
+                <blockquote className="border-l-4 border-orange-500 bg-orange-50 rounded-r-xl px-5 py-4 mb-8 text-gray-700 italic leading-relaxed">
+                  {frontmatter.excerpt}
+                </blockquote>
               )}
-              <div className="prose prose-gray max-w-none">
-                <p className="text-gray-700 leading-relaxed whitespace-pre-line">{content}</p>
+
+              <div className="mb-3 flex items-center gap-3">
+                <h2 className="text-xl font-black text-gray-900">Mô Tả Dự Án</h2>
+                <div className="flex-1 h-px bg-gray-200" />
               </div>
+              <p className="text-gray-600 leading-8 whitespace-pre-line">{content}</p>
             </div>
 
             {/* Sidebar */}
             <div>
-              <div className="bg-gray-50 rounded-xl p-6 border border-gray-100 sticky top-24">
-                <h3 className="font-bold text-gray-900 mb-4 text-lg">Thông Tin Dự Án</h3>
-                <dl className="space-y-3">
-                  <div>
-                    <dt className="text-xs text-gray-400 uppercase tracking-wider">Chủ Đầu Tư</dt>
-                    <dd className="font-semibold text-gray-800 mt-1">{frontmatter.client}</dd>
+              <div className="rounded-xl border border-gray-100 overflow-hidden sticky top-24 shadow-sm">
+                <div className="bg-[#0d1b2a] px-6 py-4">
+                  <h3 className="font-bold text-white text-lg">Thông Tin Dự Án</h3>
+                </div>
+                <div className="divide-y divide-gray-100">
+                  <div className="flex items-start gap-4 px-6 py-4">
+                    <span className="text-orange-500 text-xl mt-0.5">👤</span>
+                    <div>
+                      <p className="text-xs text-gray-400 uppercase tracking-wider mb-1">Chủ Đầu Tư</p>
+                      <p className="font-semibold text-gray-800">{frontmatter.client}</p>
+                    </div>
                   </div>
-                  <div>
-                    <dt className="text-xs text-gray-400 uppercase tracking-wider">Năm Hoàn Thành</dt>
-                    <dd className="font-semibold text-gray-800 mt-1">{frontmatter.year}</dd>
+                  <div className="flex items-start gap-4 px-6 py-4">
+                    <span className="text-orange-500 text-xl mt-0.5">📅</span>
+                    <div>
+                      <p className="text-xs text-gray-400 uppercase tracking-wider mb-1">Năm Hoàn Thành</p>
+                      <p className="font-semibold text-gray-800">{frontmatter.year}</p>
+                    </div>
                   </div>
-                  <div>
-                    <dt className="text-xs text-gray-400 uppercase tracking-wider">Địa Điểm</dt>
-                    <dd className="font-semibold text-gray-800 mt-1">{frontmatter.location}</dd>
+                  <div className="flex items-start gap-4 px-6 py-4">
+                    <span className="text-orange-500 text-xl mt-0.5">📍</span>
+                    <div>
+                      <p className="text-xs text-gray-400 uppercase tracking-wider mb-1">Địa Điểm</p>
+                      <p className="font-semibold text-gray-800">{frontmatter.location}</p>
+                    </div>
                   </div>
-                  <div>
-                    <dt className="text-xs text-gray-400 uppercase tracking-wider">Hạng Mục</dt>
-                    <dd className="mt-1">
+                  <div className="flex items-start gap-4 px-6 py-4">
+                    <span className="text-orange-500 text-xl mt-0.5">🏗️</span>
+                    <div>
+                      <p className="text-xs text-gray-400 uppercase tracking-wider mb-1">Hạng Mục</p>
                       <span className="bg-orange-100 text-orange-700 text-xs font-semibold px-2 py-1 rounded">
                         {categoryLabels[frontmatter.category]?.vi ?? frontmatter.category}
                       </span>
-                    </dd>
+                    </div>
                   </div>
-                </dl>
-                <div className="mt-6 pt-6 border-t border-gray-200">
+                </div>
+                <div className="px-6 py-5 bg-gray-50">
                   <Link
                     href="/lien-he"
                     className="block w-full bg-orange-500 hover:bg-orange-600 text-white font-bold text-center py-3 rounded-lg transition-colors"
