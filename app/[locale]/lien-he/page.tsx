@@ -6,12 +6,25 @@ import { useTranslations } from "next-intl";
 export default function ContactPage() {
   const t = useTranslations("contact");
   const [sent, setSent] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
   const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // In production, wire this to an API route
-    setSent(true);
+    setLoading(true);
+    setError("");
+    const res = await fetch("/api/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(form),
+    });
+    setLoading(false);
+    if (res.ok) {
+      setSent(true);
+    } else {
+      setError("Gửi thất bại. Vui lòng thử lại.");
+    }
   };
 
   return (
@@ -95,13 +108,13 @@ export default function ContactPage() {
             {/* Form */}
             <div>
               <h2 className="text-2xl font-black text-gray-900 mb-8">Gửi Tin Nhắn</h2>
-              {sent ? (
-                <div className="bg-green-50 border border-green-200 rounded-xl p-8 text-center">
-                  <div className="text-4xl mb-3">✅</div>
+              {sent && (
+                <div className="bg-green-50 border border-green-200 rounded-xl p-4 mb-4 flex items-center gap-3">
+                  <span className="text-2xl">✅</span>
                   <p className="text-green-700 font-semibold">{t("formSuccess")}</p>
                 </div>
-              ) : (
-                <form onSubmit={handleSubmit} className="space-y-4">
+              )}
+              <form onSubmit={handleSubmit} className="space-y-4">
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-1">{t("formName")}</label>
                     <input
@@ -142,14 +155,15 @@ export default function ContactPage() {
                       className="w-full border border-gray-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-orange-400 transition-colors resize-none"
                     />
                   </div>
+                  {error && <p className="text-red-500 text-sm">{error}</p>}
                   <button
                     type="submit"
-                    className="w-full bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 rounded-lg transition-colors"
+                    disabled={loading}
+                    className="w-full bg-orange-500 hover:bg-orange-600 disabled:opacity-60 text-white font-bold py-3 rounded-lg transition-colors"
                   >
-                    {t("formSend")}
+                    {loading ? "Đang gửi..." : t("formSend")}
                   </button>
                 </form>
-              )}
             </div>
           </div>
         </div>
