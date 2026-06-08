@@ -27,17 +27,14 @@ export default function AboutPage() {
 
   return (
     <>
-      {/* Hero */}
-      <div className="bg-[#0d1b2a] pt-32 pb-16 text-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
-          <h1 className="text-4xl lg:text-5xl font-black mb-4">{t("title")}</h1>
-          <p className="text-gray-300 text-lg">{t("subtitle")}</p>
-        </div>
-      </div>
-
       {/* Mission / Vision / Values */}
-      <section className="py-20 bg-white">
+      <section className="pt-32 py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="mb-12 text-center">
+            <h1 className="text-3xl lg:text-4xl font-black text-gray-900 mb-1">{t("title")}</h1>
+            <p className="text-gray-500">{t("subtitle")}</p>
+            <div className="w-12 h-1 bg-orange-500 mx-auto mt-3" />
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               { icon: "🎯", title: t("missionTitle"), desc: "Đóng góp vào sự phát triển đất nước thông qua sự nghiệp xây dựng, thực hiện công nghiệp hóa và hiện đại hóa." },

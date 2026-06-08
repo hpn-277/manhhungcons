@@ -22,11 +22,11 @@ export default function Footer() {
         <div>
           <div className="flex items-center gap-3 mb-4">
             <Image
-              src="/logo.jpg"
+              src="/logo-mh.png"
               alt="Xây Dựng Mạnh Hùng"
-              width={44}
-              height={44}
-              className="rounded object-contain"
+              width={52}
+              height={52}
+              className="object-contain"
             />
             <span className="text-white font-bold text-lg">Xây Dựng Mạnh Hùng</span>
           </div>
@@ -74,7 +74,16 @@ export default function Footer() {
           <ul className="space-y-3 text-sm text-gray-400">
             <li className="flex gap-2 items-start">
               <MdLocationOn className="text-orange-500 mt-0.5 shrink-0" size={18} />
-              <span>Thị Xã Phú Mỹ, Bà Rịa - Vũng Tàu</span>
+              <div className="space-y-1">
+                <div>
+                  <span className="text-gray-500 text-xs uppercase tracking-wide">Địa chỉ thuế</span>
+                  <p>107B Khu phố Chu Hải, Phường Tân Hải, TP Hồ Chí Minh, Việt Nam</p>
+                </div>
+                <div>
+                  <span className="text-gray-500 text-xs uppercase tracking-wide">Địa chỉ văn phòng</span>
+                  <p>107B Khu phố Chu Hải, Phường Tân Hải, Thành Phố Phú Mỹ, Tỉnh Bà Rịa - Vũng Tàu, Việt Nam</p>
+                </div>
+              </div>
             </li>
             <li className="flex gap-2 items-center">
               <MdPhone className="text-orange-500 shrink-0" size={18} />

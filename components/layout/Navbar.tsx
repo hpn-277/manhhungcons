@@ -25,7 +25,6 @@ export default function Navbar() {
     { href: "/gioi-thieu", label: t("about") },
     { href: "/danh-sach-du-an", label: t("projects") },
     { href: "/dich-vu", label: t("services") },
-    { href: "/blog", label: t("blog") },
     { href: "/lien-he", label: t("contact") },
   ];
 
@@ -73,13 +72,6 @@ export default function Navbar() {
         </nav>
 
         <div className="flex items-center gap-3">
-          <button
-            onClick={toggleLocale}
-            className="text-sm font-semibold px-3 py-1 rounded border transition-colors border-gray-300 text-gray-700 hover:border-orange-500 hover:text-orange-500"
-          >
-            {locale === "vi" ? "EN" : "VI"}
-          </button>
-
           <Link
             href="/lien-he"
             className="hidden lg:block bg-orange-500 hover:bg-orange-600 text-white text-sm font-semibold px-4 py-2 rounded transition-colors"

@@ -16,15 +16,13 @@ export default function ContactPage() {
 
   return (
     <>
-      <div className="bg-[#0d1b2a] pt-32 pb-16 text-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
-          <h1 className="text-4xl lg:text-5xl font-black mb-4">{t("title")}</h1>
-          <p className="text-gray-300 text-lg">{t("subtitle")}</p>
-        </div>
-      </div>
-
-      <section className="py-16 bg-white">
+      <section className="pt-32 py-16 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
+          <div className="mb-10">
+            <h1 className="text-3xl lg:text-4xl font-black text-gray-900 mb-1">{t("title")}</h1>
+            <p className="text-gray-500">{t("subtitle")}</p>
+            <div className="w-12 h-1 bg-orange-500 mt-3" />
+          </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Info */}
             <div>
@@ -36,7 +34,10 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <div className="font-semibold text-gray-900 mb-1">{t("address")}</div>
-                    <div className="text-gray-500 text-sm">Thị Xã Phú Mỹ, Bà Rịa - Vũng Tàu, Việt Nam</div>
+                    <div className="text-gray-500 text-sm space-y-1">
+                      <p><span className="font-medium text-gray-600">Địa chỉ thuế:</span> 107B Khu phố Chu Hải, Phường Tân Hải, TP Hồ Chí Minh, Việt Nam</p>
+                      <p><span className="font-medium text-gray-600">Văn phòng:</span> 107B Khu phố Chu Hải, Phường Tân Hải, Thành Phố Phú Mỹ, Tỉnh Bà Rịa - Vũng Tàu, Việt Nam</p>
+                    </div>
                   </div>
                 </li>
                 <li className="flex gap-4">
@@ -80,7 +81,7 @@ export default function ContactPage() {
               {/* Map placeholder */}
               <div className="mt-8 rounded-xl overflow-hidden border border-gray-100 h-64 bg-gray-100 flex items-center justify-center">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31398.76539218376!2d107.0396!3d10.5660!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3175a88a24e6dfd7%3A0x56b3a5b4e21b8c5e!2sPh%C3%BA%20M%E1%BB%B9%2C%20B%C3%A0%20R%E1%BB%8Ba%20-%20V%C5%A9ng%20T%C3%A0u!5e0!3m2!1svi!2svn!4v1700000000000"
+                  src="https://maps.google.com/maps?q=C%C3%B4ng+ty+TNHH+X%C3%A2y+D%E1%BB%B1ng+M%E1%BA%A1nh+H%C3%B9ng&ll=10.5013138,107.1139271&z=17&hl=vi&output=embed"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}

@@ -59,7 +59,7 @@ export default function Testimonials() {
               key={i}
               className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 hover:border-orange-200 transition-colors"
             >
-              <div className="text-orange-500 text-3xl mb-3">"</div>
+              {/* <div className="text-orange-500 text-3xl mb-3">"</div> */}
               <p className="text-gray-700 leading-relaxed mb-5 italic">
                 {locale === "en" ? item.quoteEn : item.quote}
               </p>

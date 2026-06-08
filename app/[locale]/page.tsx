@@ -4,6 +4,7 @@ import HeroCarousel from "@/components/sections/HeroCarousel";
 import StatCounter from "@/components/sections/StatCounter";
 import WhyUs from "@/components/sections/WhyUs";
 import Testimonials from "@/components/sections/Testimonials";
+import Clients from "@/components/sections/Clients";
 import ProjectCard from "@/components/ui/ProjectCard";
 import ServiceCard from "@/components/ui/ServiceCard";
 import { getProjects, getServices } from "@/lib/content";
@@ -97,6 +98,7 @@ export default function HomePage() {
 
       <WhyUs />
       <Testimonials />
+      <Clients />
 
       {/* CTA Banner */}
       <section className="py-20 bg-orange-500">

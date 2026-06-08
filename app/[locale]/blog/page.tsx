@@ -12,15 +12,13 @@ export default function BlogPage() {
 
   return (
     <>
-      <div className="bg-[#0d1b2a] pt-32 pb-16 text-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
-          <h1 className="text-4xl lg:text-5xl font-black mb-4">{t("title")}</h1>
-          <p className="text-gray-300 text-lg">{t("subtitle")}</p>
-        </div>
-      </div>
-
-      <section className="py-16 bg-white">
+      <section className="pt-32 py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="mb-10">
+            <h1 className="text-3xl lg:text-4xl font-black text-gray-900 mb-1">{t("title")}</h1>
+            <p className="text-gray-500">{t("subtitle")}</p>
+            <div className="w-12 h-1 bg-orange-500 mt-3" />
+          </div>
           {posts.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {posts.map((post) => {

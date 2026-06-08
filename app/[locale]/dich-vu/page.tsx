@@ -6,11 +6,46 @@ import type { Metadata } from "next";
 export const metadata: Metadata = { title: "Dịch Vụ" };
 
 const defaultServices = [
-  { slug: "sua-chua-bao-tri", title: "Sửa Chữa & Bảo Trì", titleEn: "Maintenance & Repairs", icon: "🔧", excerpt: "Sửa chữa, bảo trì công trình công nghiệp và dân dụng theo quy trình 8 bước chuyên nghiệp.", excerptEn: "Professional 8-step maintenance and repair of industrial and civil structures." },
-  { slug: "xay-dung-biet-thu-mini-nha-cap-4-tron-goi", title: "Biệt Thự & Nhà Ở Trọn Gói", titleEn: "Residential Construction", icon: "🏠", excerpt: "Xây dựng biệt thự mini, nhà cấp 4 trọn gói từ 4-5 triệu/m². Bảo hành 12 tháng.", excerptEn: "Complete villa and house construction packages from 4-5M VND/m². 12-month warranty." },
-  { slug: "xay-dung-co-so-ha-tang-ky-thuat", title: "Cơ Sở Hạ Tầng Kỹ Thuật", titleEn: "Technical Infrastructure", icon: "⚙️", excerpt: "Xây dựng hệ thống cấp thoát nước, xử lý nước thải, bể chứa công nghiệp.", excerptEn: "Water supply, drainage, wastewater treatment and industrial tank systems." },
-  { slug: "xay-dung-nha-tho", title: "Xây Dựng Nhà Thô", titleEn: "Shell Construction", icon: "🏗️", excerpt: "Thi công phần thô nhà ở dân dụng từ 3.5 triệu/m². Đảm bảo chất lượng kết cấu.", excerptEn: "Residential shell construction from 3.5M VND/m². Quality structural work." },
-  { slug: "xay-dung-nha-xuong", title: "Xây Dựng Nhà Xưởng", titleEn: "Factory Construction", icon: "🏭", excerpt: "Thiết kế, thi công nhà xưởng công nghiệp, nhà thép tiền chế toàn diện.", excerptEn: "Design and build industrial factories and prefabricated steel structures." },
+  {
+    slug: "sua-chua-bao-tri",
+    title: "Nâng Cấp & Sửa Chữa Công Trình", titleEn: "Maintenance & Repairs",
+    icon: "🔧",
+    pricing: null,
+    excerpt: "Bảo trì, sửa chữa công trình công nghiệp và dân dụng theo quy trình 8 bước chuyên nghiệp. Kinh nghiệm xử lý thấm dột, rò rỉ và hư hỏng kết cấu.",
+    excerptEn: "Professional 8-step industrial and civil building maintenance. Experts in water leaks, structural repairs, and system upgrades.",
+  },
+  {
+    slug: "xay-dung-biet-thu-mini-nha-cap-4-tron-goi",
+    title: "Xây Dựng Nhà Phố & Biệt Thự Trọn Gói", titleEn: "Townhouse & Villa Construction",
+    icon: "🏠",
+    pricing: "Từ 4.000.000 đ/m²",
+    excerpt: "Xây dựng trọn gói từ móng đến hoàn thiện. Bảo hành kết cấu 12 tháng, hệ thống điện nước 5 năm. Diện tích càng lớn, chi phí càng tối ưu.",
+    excerptEn: "Complete build from foundation to finishing. 12-month structural warranty, 5-year electrical/plumbing. Larger area = lower cost per m².",
+  },
+  {
+    slug: "xay-dung-co-so-ha-tang-ky-thuat",
+    title: "Cơ Sở Hạ Tầng Kỹ Thuật", titleEn: "Technical Infrastructure",
+    icon: "⚙️",
+    pricing: null,
+    excerpt: "Thi công hệ thống cấp thoát nước, xử lý nước thải, bể chứa công nghiệp, hầm bê tông, mương thoát nước cho nhà máy và khu công nghiệp.",
+    excerptEn: "Water supply, drainage, wastewater treatment, industrial tanks, concrete pits, and drainage channels for factories and industrial zones.",
+  },
+  {
+    slug: "xay-dung-nha-tho",
+    title: "Xây Dựng Nhà Thô", titleEn: "Shell Construction",
+    icon: "🏗️",
+    pricing: "Từ 3.500.000 đ/m²",
+    excerpt: "Thi công phần thô nhà ở dân dụng bao gồm móng, kết cấu bê tông, tường gạch, mái, cầu thang và hệ thống ngầm. Giá minh bạch theo diện tích thực tế.",
+    excerptEn: "Residential shell construction covering foundations, concrete structure, masonry, roofing, stairs, and embedded systems. Transparent pricing by actual area.",
+  },
+  {
+    slug: "xay-dung-nha-xuong",
+    title: "Thiết Kế & Thi Công Nhà Xưởng", titleEn: "Factory & Industrial Construction",
+    icon: "🏭",
+    pricing: null,
+    excerpt: "Thiết kế và thi công nhà xưởng, nhà thép tiền chế, kho công nghiệp và hạ tầng phụ trợ tại các khu công nghiệp Bà Rịa - Vũng Tàu.",
+    excerptEn: "Design and build factories, prefabricated steel structures, industrial warehouses, and support infrastructure in Ba Ria - Vung Tau industrial zones.",
+  },
 ];
 
 export default function ServicesPage() {
@@ -23,26 +58,35 @@ export default function ServicesPage() {
 
   return (
     <>
-      <div className="bg-[#0d1b2a] pt-32 pb-16 text-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
-          <h1 className="text-4xl lg:text-5xl font-black mb-4">{t("subtitle")}</h1>
-          <p className="text-gray-300 text-lg">{t("title")}</p>
-        </div>
-      </div>
-
-      <section className="py-16 bg-white">
+      <section className="pt-32 py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="mb-10">
+            <h1 className="text-3xl lg:text-4xl font-black text-gray-900 mb-1">{t("subtitle")}</h1>
+            <p className="text-gray-500">{t("title")}</p>
+            <div className="w-12 h-1 bg-orange-500 mt-3" />
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {defaultServices.map((svc) => (
-              <div key={svc.slug} className="group flex gap-6 p-6 bg-gray-50 rounded-xl border border-gray-100 hover:border-orange-200 hover:shadow-md transition-all">
-                <div className="text-4xl shrink-0">{svc.icon}</div>
-                <div>
-                  <h2 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-orange-500 transition-colors">
-                    {locale === "en" ? svc.titleEn : svc.title}
-                  </h2>
-                  <p className="text-gray-500 text-sm leading-relaxed mb-4">
-                    {locale === "en" ? svc.excerptEn : svc.excerpt}
-                  </p>
+              <div key={svc.slug} className="group flex flex-col bg-gray-50 rounded-xl border border-gray-100 hover:border-orange-200 hover:shadow-md transition-all overflow-hidden">
+                <div className="flex items-start gap-4 p-6 pb-4">
+                  <div className="text-4xl shrink-0">{svc.icon}</div>
+                  <div className="flex-1 min-w-0">
+                    <div className="flex items-start justify-between gap-2 mb-2">
+                      <h2 className="text-lg font-bold text-gray-900 group-hover:text-orange-500 transition-colors leading-snug">
+                        {locale === "en" ? svc.titleEn : svc.title}
+                      </h2>
+                      {svc.pricing && (
+                        <span className="shrink-0 text-xs font-bold bg-orange-100 text-orange-700 px-2 py-1 rounded whitespace-nowrap">
+                          {svc.pricing}
+                        </span>
+                      )}
+                    </div>
+                    <p className="text-gray-500 text-sm leading-relaxed">
+                      {locale === "en" ? svc.excerptEn : svc.excerpt}
+                    </p>
+                  </div>
+                </div>
+                <div className="px-6 pb-5 mt-auto">
                   <Link
                     href={`/dich-vu/${svc.slug}`}
                     className="inline-flex items-center gap-1 text-sm font-semibold text-orange-500 hover:text-orange-600 transition-colors"

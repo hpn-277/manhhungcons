@@ -32,18 +32,16 @@ export default async function BlogPostPage({ params }: Props) {
 
   return (
     <div className="min-h-screen bg-white">
-      <div className="bg-[#0d1b2a] pt-32 pb-16 text-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6">
-          <div className="flex flex-wrap gap-2 mb-4">
-            {frontmatter.tags?.map((tag) => (
-              <span key={tag} className="text-xs bg-orange-500/20 text-orange-300 border border-orange-500/30 px-2 py-1 rounded">
-                {tag}
-              </span>
-            ))}
-          </div>
-          <h1 className="text-3xl lg:text-4xl font-black mb-4">{frontmatter.title}</h1>
-          <p className="text-gray-400 text-sm">{frontmatter.date}</p>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 pt-32 pb-8 border-b border-gray-100">
+        <div className="flex flex-wrap gap-2 mb-4">
+          {frontmatter.tags?.map((tag) => (
+            <span key={tag} className="text-xs bg-orange-100 text-orange-700 border border-orange-200 px-2 py-1 rounded">
+              {tag}
+            </span>
+          ))}
         </div>
+        <h1 className="text-3xl lg:text-4xl font-black text-gray-900 mb-3">{frontmatter.title}</h1>
+        <p className="text-gray-400 text-sm">{frontmatter.date}</p>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-16">
