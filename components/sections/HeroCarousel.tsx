@@ -7,15 +7,15 @@ import { Link } from "@/i18n/navigation";
 
 const slides = [
   {
-    src: "/images/2019-05-CONG-NHA-THO-LANG-CAT-1-540x415.jpg",
-    alt: "Cổng nhà thờ giáo xứ Láng Cát",
+    src: "/images/hero-1.jpg",
+    alt: "Công trình xây dựng Mạnh Hùng",
   },
   {
-    src: "/images/2019-05-DSC00173-540x405.jpg",
-    alt: "Khu biệt thự sinh thái Châu Pha",
+    src: "/images/hero-2.jpg",
+    alt: "Công trình xây dựng Mạnh Hùng",
   },
   {
-    src: "/images/2019-07-4-Copy-1.jpg",
+    src: "/images/hero-3.jpg",
     alt: "Công trình xây dựng Mạnh Hùng",
   },
 ];
