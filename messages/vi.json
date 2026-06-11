@@ -2,7 +2,7 @@
   "nav": {
     "home": "Trang Chủ",
     "about": "Giới Thiệu",
-    "projects": "Dự Án",
+    "projects": "Công Trình",
     "services": "Dịch Vụ",
     "blog": "Tin Tức",
     "contact": "Liên Hệ",
@@ -11,17 +11,17 @@
   "home": {
     "heroTagline": "Kiến Tạo Công Trình Bền Vững",
     "heroSubtitle": "Chuyên xây dựng nhà xưởng công nghiệp, biệt thự, cơ sở hạ tầng tại Bà Rịa - Vũng Tàu",
-    "viewProjects": "Xem Dự Án",
+    "viewProjects": "Xem Công Trình",
     "contactUs": "Liên Hệ Ngay",
     "stats": {
       "years": "Năm Kinh Nghiệm",
-      "projects": "Dự Án Hoàn Thành",
+      "projects": "Công trình hoàn thành",
       "services": "Lĩnh Vực Dịch Vụ",
       "clients": "Khách Hàng"
     },
     "servicesTitle": "Dịch Vụ Của Chúng Tôi",
     "servicesSubtitle": "Cung cấp giải pháp xây dựng toàn diện cho mọi công trình",
-    "projectsTitle": "Dự Án Nổi Bật",
+    "projectsTitle": "Công Trình Nổi Bật",
     "projectsSubtitle": "Những công trình tiêu biểu chúng tôi đã thực hiện",
     "whyTitle": "Tại Sao Chọn Chúng Tôi",
     "why": {
@@ -44,7 +44,7 @@
     },
     "testimonialsTitle": "Khách Hàng Nói Gì",
     "clientsTitle": "Đối Tác & Khách Hàng",
-    "ctaBanner": "Sẵn Sàng Bắt Đầu Dự Án?",
+    "ctaBanner": "Sẵn Sàng Bắt Đầu Công Trình?",
     "ctaDesc": "Liên hệ ngay để nhận tư vấn và báo giá miễn phí",
     "ctaButton": "Yêu Cầu Báo Giá"
   },
@@ -58,19 +58,19 @@
     "workflowTitle": "Quy Trình Làm Việc"
   },
   "projects": {
-    "title": "Dự Án Đã Thực Hiện",
+    "title": "Công Trình Đã Thực Hiện",
     "subtitle": "Tổng hợp các công trình tiêu biểu của Mạnh Hùng",
     "all": "Tất Cả",
     "industrial": "Công Nghiệp",
     "residential": "Dân Dụng",
     "infrastructure": "Hạ Tầng",
     "maintenance": "Bảo Trì",
-    "searchPlaceholder": "Tìm kiếm dự án...",
+    "searchPlaceholder": "Tìm kiếm công trình...",
     "client": "Chủ Đầu Tư",
     "year": "Năm",
     "location": "Địa Điểm",
     "category": "Hạng Mục",
-    "relatedProjects": "Dự Án Liên Quan"
+    "relatedProjects": "Công Trình Liên Quan"
   },
   "services": {
     "title": "Dịch Vụ",

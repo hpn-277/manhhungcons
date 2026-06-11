@@ -53,11 +53,10 @@ export default function StatCounter() {
   return (
     <section className="py-16 bg-white border-b border-gray-100">
       <div className="max-w-5xl mx-auto px-4 sm:px-6">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-          <Stat value={15} suffix="+" label={t("years")} />
-          <Stat value={23} suffix="+" label={t("projects")} />
-          <Stat value={5} suffix="" label={t("services")} />
-          <Stat value={9} suffix="+" label={t("clients")} />
+        <div className="grid grid-cols-3 gap-8 justify-items-center">
+          <Stat value={20} suffix="+" label={t("years")} />
+          <Stat value={100} suffix="+" label={t("projects")} />
+          <Stat value={30} suffix="+" label={t("clients")} />
         </div>
       </div>
     </section>
