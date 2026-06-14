@@ -45,11 +45,10 @@ export default function ProjectsFilter({ projects }: Props) {
             <button
               key={cat}
               onClick={() => setCategory(cat)}
-              className={`px-4 py-2 rounded-full text-sm font-semibold transition-colors ${
-                category === cat
+              className={`px-4 py-2 rounded-full text-sm font-semibold transition-colors ${category === cat
                   ? "bg-orange-500 text-white"
                   : "bg-gray-100 text-gray-700 hover:bg-gray-200"
-              }`}
+                }`}
             >
               {catLabels[cat]}
             </button>

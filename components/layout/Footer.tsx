@@ -11,8 +11,7 @@ export default function Footer() {
     { href: "/dich-vu/sua-chua-bao-tri", label: "Sửa Chữa & Bảo Trì" },
     { href: "/dich-vu/xay-dung-biet-thu-mini-nha-cap-4-tron-goi", label: "Biệt Thự & Nhà Ở" },
     { href: "/dich-vu/xay-dung-co-so-ha-tang-ky-thuat", label: "Cơ Sở Hạ Tầng" },
-    { href: "/dich-vu/xay-dung-nha-tho", label: "Xây Nhà Thô" },
-    { href: "/dich-vu/xay-dung-nha-xuong", label: "Xây Dựng Nhà Xưởng" },
+{ href: "/dich-vu/xay-dung-nha-xuong", label: "Xây Dựng Nhà Xưởng" },
   ];
 
   return (

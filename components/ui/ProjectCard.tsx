@@ -21,7 +21,7 @@ export default function ProjectCard({ slug, frontmatter }: Props) {
   const excerpt = locale === "en" ? frontmatter.excerptEn || frontmatter.excerpt : frontmatter.excerpt;
   const catLabel = categoryLabels[frontmatter.category]?.[locale as "vi" | "en"] ?? frontmatter.category;
   const heroImage = frontmatter.images?.[0];
-
+  console.log('heroImage', heroImage)
   return (
     <Link href={`/project/${slug}`} className="group block">
       <div className="relative overflow-hidden rounded-lg bg-gray-100 aspect-[4/3]">

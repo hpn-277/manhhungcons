@@ -31,14 +31,6 @@ const defaultServices = [
     excerptEn: "Water supply, drainage, wastewater treatment, industrial tanks, concrete pits, and drainage channels for factories and industrial zones.",
   },
   {
-    slug: "xay-dung-nha-tho",
-    title: "Xây Dựng Nhà Thô", titleEn: "Shell Construction",
-    icon: "🏗️",
-    pricing: "Từ 3.500.000 đ/m²",
-    excerpt: "Thi công phần thô nhà ở dân dụng bao gồm móng, kết cấu bê tông, tường gạch, mái, cầu thang và hệ thống ngầm. Giá minh bạch theo diện tích thực tế.",
-    excerptEn: "Residential shell construction covering foundations, concrete structure, masonry, roofing, stairs, and embedded systems. Transparent pricing by actual area.",
-  },
-  {
     slug: "xay-dung-nha-xuong",
     title: "Thiết Kế & Thi Công Nhà Xưởng", titleEn: "Factory & Industrial Construction",
     icon: "🏭",
