@@ -18,7 +18,7 @@ const defaultServices = [
     slug: "xay-dung-biet-thu-mini-nha-cap-4-tron-goi",
     title: "Xây Dựng Nhà Phố & Biệt Thự Trọn Gói", titleEn: "Townhouse & Villa Construction",
     icon: "🏠",
-    pricing: "Từ 4.000.000 đ/m²",
+    pricing: "Từ 6.000.000 đ/m²",
     excerpt: "Xây dựng trọn gói từ móng đến hoàn thiện. Bảo hành kết cấu 12 tháng, hệ thống điện nước 5 năm. Diện tích càng lớn, chi phí càng tối ưu.",
     excerptEn: "Complete build from foundation to finishing. 12-month structural warranty, 5-year electrical/plumbing. Larger area = lower cost per m².",
   },
