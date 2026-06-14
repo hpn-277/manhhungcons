@@ -12,7 +12,7 @@ interface Props {
 export async function generateStaticParams() {
   const services = getServices();
   const locales = ["vi", "en"];
-  const slugs = ["sua-chua-bao-tri", "xay-dung-biet-thu-mini-nha-cap-4-tron-goi", "xay-dung-co-so-ha-tang-ky-thuat", "xay-dung-nha-xuong"];
+  const slugs = ["sua-chua-bao-tri", "xay-dung-biet-thu-mini-nha-cap-4-tron-goi", "xay-dung-co-so-ha-tang-ky-thuat", "xay-dung-nha-xuong", "duc-pha-be-tong-thao-do-nha-xuong"];
   const allSlugs = services.length > 0 ? services.map((s) => s.slug) : slugs;
   return allSlugs.flatMap((slug) => locales.map((locale) => ({ slug, locale })));
 }
@@ -253,6 +253,57 @@ const serviceData: Record<string, ServiceContent> = {
     ],
   },
 
+  "duc-pha-be-tong-thao-do-nha-xuong": {
+    title: "Đục Phá Bê Tông & Tháo Dỡ Nhà Xưởng",
+    titleEn: "Concrete Breaking & Structure Demolition",
+    icon: "🏗️",
+    category: "industrial",
+    intro: "Bạn cần giải phóng mặt bằng? Bạn muốn phá dỡ nhà cũ, nhà xưởng an toàn và nhanh chóng? Hãy gọi ngay cho chúng tôi! Báo giá trọn gói, khảo sát miễn phí tận nơi.",
+    introEn: "Need to clear a site? Want to safely and quickly demolish an old building or factory? Call us now! All-in pricing with free on-site survey.",
+    sections: [
+      {
+        heading: "Các Dịch Vụ Thi Công",
+        headingEn: "Services We Offer",
+        items: [
+          "Đục phá bê tông: phá nền, sàn, dầm, cột kiên cố",
+          "Tháo dỡ nhà xưởng: hạ tải khung thép, mái tôn an toàn",
+          "Đập phá nhà cũ: nhà phố, nhà cấp 4, công trình xuống cấp",
+          "Khoan cắt bê tông: khoan rút lõi chính xác, không rung lắc",
+          "Dọn dẹp xà bần: thu gom và vận chuyển, trả lại mặt bằng trống",
+        ],
+        itemsEn: [
+          "Concrete breaking: foundations, slabs, beams, columns",
+          "Factory dismantling: steel frame unloading, safe metal roof removal",
+          "Old building demolition: townhouses, level-4 houses, deteriorated structures",
+          "Concrete core drilling: precise, vibration-free drilling",
+          "Debris removal: collection and transport, clean site handover",
+        ],
+      },
+      {
+        heading: "Cam Kết Với Khách Hàng",
+        headingEn: "Our Commitments",
+        items: [
+          "An toàn tuyệt đối: thi công che chắn kỹ, không ảnh hưởng nhà xung quanh",
+          "Tiến độ nhanh: đội thợ khỏe, máy móc hiện đại, làm việc 24/7",
+          "Giá cả bình dân: báo giá trọn gói, cạnh tranh nhất thị trường",
+          "Thu mua lại sắt thép, xác nhà cũ với giá cao để tiết kiệm chi phí",
+        ],
+        itemsEn: [
+          "Full safety: proper shielding, no impact on surrounding buildings",
+          "Fast turnaround: strong crew, modern equipment, 24/7 availability",
+          "Competitive pricing: all-in quotes, best rates on the market",
+          "Scrap metal and old structure buyback to offset your costs",
+        ],
+      },
+    ],
+    process: [
+      { step: "01", title: "Gọi điện: 098 478 19 09", titleEn: "Call: 098 478 19 09" },
+      { step: "02", title: "Khảo sát tận nơi (miễn phí)", titleEn: "Free on-site survey" },
+      { step: "03", title: "Báo giá trọn gói", titleEn: "All-in quotation" },
+      { step: "04", title: "Thi công ngay", titleEn: "Immediate construction start" },
+    ],
+  },
+
   "xay-dung-nha-xuong": {
     title: "Thiết Kế & Thi Công Nhà Xưởng",
     titleEn: "Factory & Industrial Construction",
@@ -392,7 +443,7 @@ export default async function ServiceDetailPage({ params }: Props) {
         <section className="py-14 bg-gray-50">
           <div className="max-w-4xl mx-auto px-4 sm:px-6">
             <h2 className="text-2xl font-black text-gray-900 mb-2">
-              {isEn ? "8-Step Process" : "Quy Trình 8 Bước"}
+              {isEn ? "Process" : "Quy Trình"}
             </h2>
             <div className="w-10 h-1 bg-orange-500 mb-8" />
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">

@@ -38,6 +38,14 @@ const defaultServices = [
     excerpt: "Thiết kế và thi công nhà xưởng, nhà thép tiền chế, kho công nghiệp và hạ tầng phụ trợ tại các khu công nghiệp Bà Rịa - Vũng Tàu.",
     excerptEn: "Design and build factories, prefabricated steel structures, industrial warehouses, and support infrastructure in Ba Ria - Vung Tau industrial zones.",
   },
+  {
+    slug: "duc-pha-be-tong-thao-do-nha-xuong",
+    title: "Đục Phá Bê Tông & Tháo Dỡ Nhà Xưởng", titleEn: "Concrete Breaking & Structure Demolition",
+    icon: "🏗️",
+    pricing: null,
+    excerpt: "Đục phá bê tông, tháo dỡ nhà xưởng, đập phá nhà cũ, khoan cắt bê tông và dọn dẹp xà bần. Báo giá trọn gói, khảo sát miễn phí, thu mua lại sắt thép.",
+    excerptEn: "Concrete breaking, factory dismantling, demolition of old structures, core drilling, and debris removal. All-in pricing, free site survey, scrap metal buyback.",
+  },
 ];
 
 export default function ServicesPage() {

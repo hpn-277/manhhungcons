@@ -44,6 +44,7 @@ export default function HomePage() {
                 { slug: "xay-dung-biet-thu-mini-nha-cap-4-tron-goi", title: "Biệt Thự & Nhà Ở Trọn Gói", titleEn: "Residential Construction", icon: "home", excerpt: "Xây dựng biệt thự mini, nhà cấp 4 trọn gói", excerptEn: "Complete villa and house construction packages", category: "residential" },
                 { slug: "xay-dung-co-so-ha-tang-ky-thuat", title: "Cơ Sở Hạ Tầng Kỹ Thuật", titleEn: "Technical Infrastructure", icon: "infrastructure", excerpt: "Xây dựng hệ thống cấp thoát nước, xử lý nước thải", excerptEn: "Water supply, drainage and waste treatment systems", category: "infrastructure" },
                 { slug: "xay-dung-nha-xuong", title: "Xây Dựng Nhà Xưởng", titleEn: "Factory Construction", icon: "factory", excerpt: "Thiết kế thi công nhà xưởng, nhà công nghiệp", excerptEn: "Design and construction of factories and industrial buildings", category: "industrial" },
+                { slug: "duc-pha-be-tong-thao-do-nha-xuong", title: "Đục Phá Bê Tông & Tháo Dỡ", titleEn: "Concrete Breaking & Demolition", icon: "wrench", excerpt: "Đục phá bê tông, tháo dỡ nhà xưởng, khoan cắt và dọn xà bần", excerptEn: "Concrete breaking, factory dismantling, core drilling and debris removal", category: "industrial" },
               ].map((s) => (
                 <ServiceCard
                   key={s.slug}

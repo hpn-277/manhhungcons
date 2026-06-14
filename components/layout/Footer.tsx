@@ -12,6 +12,7 @@ export default function Footer() {
     { href: "/dich-vu/xay-dung-biet-thu-mini-nha-cap-4-tron-goi", label: "Biệt Thự & Nhà Ở" },
     { href: "/dich-vu/xay-dung-co-so-ha-tang-ky-thuat", label: "Cơ Sở Hạ Tầng" },
 { href: "/dich-vu/xay-dung-nha-xuong", label: "Xây Dựng Nhà Xưởng" },
+    { href: "/dich-vu/duc-pha-be-tong-thao-do-nha-xuong", label: "Đục Phá & Tháo Dỡ" },
   ];
 
   return (
