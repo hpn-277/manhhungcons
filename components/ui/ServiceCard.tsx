@@ -24,7 +24,7 @@ export default function ServiceCard({ slug, frontmatter }: Props) {
   return (
     <div className="group bg-white border border-gray-100 rounded-xl p-6 hover:border-orange-200 hover:shadow-lg transition-all duration-300">
       <div className="w-12 h-12 bg-orange-50 rounded-lg flex items-center justify-center text-2xl mb-4 group-hover:bg-orange-100 transition-colors">
-        {icons[frontmatter.icon] ?? "🏗️"}
+        {icons[frontmatter.icon] ?? frontmatter.icon ?? "🏗️"}
       </div>
       <h3 className="font-bold text-gray-900 text-lg mb-2 group-hover:text-orange-500 transition-colors">
         {title}

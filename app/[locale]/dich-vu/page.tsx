@@ -1,60 +1,13 @@
 import { useTranslations, useLocale } from "next-intl";
 import { Link } from "@/i18n/navigation";
-import { getServices } from "@/lib/content";
 import type { Metadata } from "next";
+import { services as defaultServices } from "@/lib/services";
 
 export const metadata: Metadata = { title: "Dịch Vụ" };
-
-const defaultServices = [
-  {
-    slug: "xay-dung-nha-xuong",
-    title: "Thiết Kế & Thi Công Nhà Xưởng", titleEn: "Factory & Industrial Construction",
-    icon: "🏭",
-    pricing: null,
-    excerpt: "Thiết kế và thi công nhà xưởng, nhà thép tiền chế, kho công nghiệp và hạ tầng phụ trợ tại các khu công nghiệp Bà Rịa - Vũng Tàu.",
-    excerptEn: "Design and build factories, prefabricated steel structures, industrial warehouses, and support infrastructure in Ba Ria - Vung Tau industrial zones.",
-  },
-  {
-    slug: "xay-dung-biet-thu-mini-nha-cap-4-tron-goi",
-    title: "Xây Dựng Nhà Phố & Biệt Thự Trọn Gói", titleEn: "Townhouse & Villa Construction",
-    icon: "🏠",
-    pricing: "Từ 6.000.000 đ/m²",
-    excerpt: "Xây dựng trọn gói từ móng đến hoàn thiện. Bảo hành kết cấu 12 tháng, hệ thống điện nước 5 năm. Diện tích càng lớn, chi phí càng tối ưu.",
-    excerptEn: "Complete build from foundation to finishing. 12-month structural warranty, 5-year electrical/plumbing. Larger area = lower cost per m².",
-  },
-  {
-    slug: "xay-dung-co-so-ha-tang-ky-thuat",
-    title: "Cơ Sở Hạ Tầng Kỹ Thuật", titleEn: "Technical Infrastructure",
-    icon: "⚙️",
-    pricing: null,
-    excerpt: "Thi công hệ thống cấp thoát nước, xử lý nước thải, bể chứa công nghiệp, hầm bê tông, mương thoát nước cho nhà máy và khu công nghiệp.",
-    excerptEn: "Water supply, drainage, wastewater treatment, industrial tanks, concrete pits, and drainage channels for factories and industrial zones.",
-  },
-  {
-    slug: "sua-chua-bao-tri",
-    title: "Nâng Cấp & Sửa Chữa Công Trình", titleEn: "Maintenance & Repairs",
-    icon: "🔧",
-    pricing: null,
-    excerpt: "Bảo trì, sửa chữa công trình công nghiệp và dân dụng theo quy trình 8 bước chuyên nghiệp. Kinh nghiệm xử lý thấm dột, rò rỉ và hư hỏng kết cấu.",
-    excerptEn: "Professional 8-step industrial and civil building maintenance. Experts in water leaks, structural repairs, and system upgrades.",
-  },
-  {
-    slug: "duc-pha-be-tong-thao-do-nha-xuong",
-    title: "Đục Phá Bê Tông & Tháo Dỡ Nhà Xưởng", titleEn: "Concrete Breaking & Structure Demolition",
-    icon: "🏗️",
-    pricing: null,
-    excerpt: "Đục phá bê tông, tháo dỡ nhà xưởng, đập phá nhà cũ, khoan cắt bê tông và dọn dẹp xà bần. Báo giá trọn gói, khảo sát miễn phí, thu mua lại sắt thép.",
-    excerptEn: "Concrete breaking, factory dismantling, demolition of old structures, core drilling, and debris removal. All-in pricing, free site survey, scrap metal buyback.",
-  },
-];
 
 export default function ServicesPage() {
   const t = useTranslations("services");
   const locale = useLocale();
-  const services = getServices();
-  const items = services.length > 0
-    ? services.map((s) => ({ ...s.frontmatter, slug: s.slug, icon: s.frontmatter.icon }))
-    : defaultServices.map((s) => ({ ...s, icon: undefined, category: "industrial" as const }));
 
   return (
     <>

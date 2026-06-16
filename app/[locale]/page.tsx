@@ -7,14 +7,14 @@ import Testimonials from "@/components/sections/Testimonials";
 import Clients from "@/components/sections/Clients";
 import ProjectCard from "@/components/ui/ProjectCard";
 import ServiceCard from "@/components/ui/ServiceCard";
-import { getProjects, getServices } from "@/lib/content";
+import { getProjects } from "@/lib/content";
+import { services } from "@/lib/services";
 
 export default function HomePage() {
   const t = useTranslations("home");
   const locale = useLocale();
   const allProjects = getProjects();
   const featuredProjects = allProjects.slice(0, 6);
-  const services = getServices();
 
   return (
     <>
@@ -31,36 +31,22 @@ export default function HomePage() {
             <p className="text-gray-500">{t("servicesSubtitle")}</p>
             <div className="w-12 h-1 bg-orange-500 mx-auto mt-4" />
           </div>
-          {services.length > 0 ? (
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {services.map((s) => (
-                <ServiceCard key={s.slug} slug={s.slug} frontmatter={s.frontmatter} />
-              ))}
-            </div>
-          ) : (
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {[
-                { slug: "sua-chua-bao-tri", title: "Sửa Chữa & Bảo Trì", titleEn: "Maintenance & Repairs", icon: "wrench", excerpt: "Sửa chữa và bảo trì công trình công nghiệp và dân dụng", excerptEn: "Maintenance and repair of industrial and civil structures", category: "maintenance" },
-                { slug: "xay-dung-biet-thu-mini-nha-cap-4-tron-goi", title: "Biệt Thự & Nhà Ở Trọn Gói", titleEn: "Residential Construction", icon: "home", excerpt: "Xây dựng biệt thự mini, nhà cấp 4 trọn gói", excerptEn: "Complete villa and house construction packages", category: "residential" },
-                { slug: "xay-dung-co-so-ha-tang-ky-thuat", title: "Cơ Sở Hạ Tầng Kỹ Thuật", titleEn: "Technical Infrastructure", icon: "infrastructure", excerpt: "Xây dựng hệ thống cấp thoát nước, xử lý nước thải", excerptEn: "Water supply, drainage and waste treatment systems", category: "infrastructure" },
-                { slug: "xay-dung-nha-xuong", title: "Xây Dựng Nhà Xưởng", titleEn: "Factory Construction", icon: "factory", excerpt: "Thiết kế thi công nhà xưởng, nhà công nghiệp", excerptEn: "Design and construction of factories and industrial buildings", category: "industrial" },
-                { slug: "duc-pha-be-tong-thao-do-nha-xuong", title: "Đục Phá Bê Tông & Tháo Dỡ", titleEn: "Concrete Breaking & Demolition", icon: "wrench", excerpt: "Đục phá bê tông, tháo dỡ nhà xưởng, khoan cắt và dọn xà bần", excerptEn: "Concrete breaking, factory dismantling, core drilling and debris removal", category: "industrial" },
-              ].map((s) => (
-                <ServiceCard
-                  key={s.slug}
-                  slug={s.slug}
-                  frontmatter={{
-                    title: s.title,
-                    titleEn: s.titleEn,
-                    icon: s.icon,
-                    excerpt: s.excerpt,
-                    excerptEn: s.excerptEn,
-                    category: s.category,
-                  }}
-                />
-              ))}
-            </div>
-          )}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {services.map((s) => (
+              <ServiceCard
+                key={s.slug}
+                slug={s.slug}
+                frontmatter={{
+                  title: s.title,
+                  titleEn: s.titleEn,
+                  icon: s.icon,
+                  excerpt: s.excerpt,
+                  excerptEn: s.excerptEn,
+                  category: s.category,
+                }}
+              />
+            ))}
+          </div>
         </div>
       </section>
 
