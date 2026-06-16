@@ -7,12 +7,12 @@ export const metadata: Metadata = { title: "Dịch Vụ" };
 
 const defaultServices = [
   {
-    slug: "sua-chua-bao-tri",
-    title: "Nâng Cấp & Sửa Chữa Công Trình", titleEn: "Maintenance & Repairs",
-    icon: "🔧",
+    slug: "xay-dung-nha-xuong",
+    title: "Thiết Kế & Thi Công Nhà Xưởng", titleEn: "Factory & Industrial Construction",
+    icon: "🏭",
     pricing: null,
-    excerpt: "Bảo trì, sửa chữa công trình công nghiệp và dân dụng theo quy trình 8 bước chuyên nghiệp. Kinh nghiệm xử lý thấm dột, rò rỉ và hư hỏng kết cấu.",
-    excerptEn: "Professional 8-step industrial and civil building maintenance. Experts in water leaks, structural repairs, and system upgrades.",
+    excerpt: "Thiết kế và thi công nhà xưởng, nhà thép tiền chế, kho công nghiệp và hạ tầng phụ trợ tại các khu công nghiệp Bà Rịa - Vũng Tàu.",
+    excerptEn: "Design and build factories, prefabricated steel structures, industrial warehouses, and support infrastructure in Ba Ria - Vung Tau industrial zones.",
   },
   {
     slug: "xay-dung-biet-thu-mini-nha-cap-4-tron-goi",
@@ -31,12 +31,12 @@ const defaultServices = [
     excerptEn: "Water supply, drainage, wastewater treatment, industrial tanks, concrete pits, and drainage channels for factories and industrial zones.",
   },
   {
-    slug: "xay-dung-nha-xuong",
-    title: "Thiết Kế & Thi Công Nhà Xưởng", titleEn: "Factory & Industrial Construction",
-    icon: "🏭",
+    slug: "sua-chua-bao-tri",
+    title: "Nâng Cấp & Sửa Chữa Công Trình", titleEn: "Maintenance & Repairs",
+    icon: "🔧",
     pricing: null,
-    excerpt: "Thiết kế và thi công nhà xưởng, nhà thép tiền chế, kho công nghiệp và hạ tầng phụ trợ tại các khu công nghiệp Bà Rịa - Vũng Tàu.",
-    excerptEn: "Design and build factories, prefabricated steel structures, industrial warehouses, and support infrastructure in Ba Ria - Vung Tau industrial zones.",
+    excerpt: "Bảo trì, sửa chữa công trình công nghiệp và dân dụng theo quy trình 8 bước chuyên nghiệp. Kinh nghiệm xử lý thấm dột, rò rỉ và hư hỏng kết cấu.",
+    excerptEn: "Professional 8-step industrial and civil building maintenance. Experts in water leaks, structural repairs, and system upgrades.",
   },
   {
     slug: "duc-pha-be-tong-thao-do-nha-xuong",

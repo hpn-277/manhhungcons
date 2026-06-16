@@ -25,6 +25,7 @@ export default function Navbar() {
     { href: "/gioi-thieu", label: t("about") },
     { href: "/danh-sach-du-an", label: t("projects") },
     { href: "/dich-vu", label: t("services") },
+    // { href: "/blog", label: t("blog") },
     { href: "/lien-he", label: t("contact") },
   ];
 

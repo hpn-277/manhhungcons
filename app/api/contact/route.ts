@@ -6,8 +6,8 @@ export async function POST(request: Request) {
   const { name, email, subject, message } = await request.json();
 
   const { error } = await resend.emails.send({
-    from: "onboarding@resend.dev",
-    to: "huuphuoc252513@gmail.com",
+    from: "no-reply@xaydungmanhhung.vn",
+    to: "manhhungcons@gmail.com",
     replyTo: email,
     subject: `[Liên hệ] ${subject}`,
     html: `

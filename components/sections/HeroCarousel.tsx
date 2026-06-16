@@ -18,6 +18,18 @@ const slides = [
     src: "/images/hero-3.jpg",
     alt: "Công trình xây dựng Mạnh Hùng",
   },
+  {
+    src: "/images/nha-ong-bat-bia.jpg",
+    alt: "Công trình xây dựng Mạnh Hùng",
+  },
+  {
+    src: "/images/duong-ong-mai-canh-taicera-20240408_104631.jpg",
+    alt: "Công trình xây dựng Mạnh Hùng",
+  },
+  {
+    src: "/images/nha-anh-cong-bia.jpg",
+    alt: "Công trình xây dựng Mạnh Hùng",
+  },
 ];
 
 export default function HeroCarousel() {
