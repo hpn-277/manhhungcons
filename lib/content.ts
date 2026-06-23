@@ -25,6 +25,7 @@ export interface BlogFrontmatter {
   excerptEn: string;
   tags: string[];
   image?: string;
+  deprecated?: boolean;
 }
 
 export interface ServiceFrontmatter {
@@ -66,11 +67,13 @@ export function getProject(slug: string): ContentItem<ProjectFrontmatter> | null
 }
 
 export function getBlogPosts(): ContentItem<BlogFrontmatter>[] {
-  return readDir<BlogFrontmatter>("blog").sort(
-    (a, b) =>
-      new Date(b.frontmatter.date).getTime() -
-      new Date(a.frontmatter.date).getTime()
-  );
+  return readDir<BlogFrontmatter>("blog")
+    .filter((p) => !p.frontmatter.deprecated)
+    .sort(
+      (a, b) =>
+        new Date(b.frontmatter.date).getTime() -
+        new Date(a.frontmatter.date).getTime()
+    );
 }
 
 export function getBlogPost(slug: string): ContentItem<BlogFrontmatter> | null {

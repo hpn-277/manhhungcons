@@ -3,6 +3,7 @@ import { useLocale, useTranslations } from "next-intl";
 import { getBlogPost, getBlogPosts } from "@/lib/content";
 import { Link } from "@/i18n/navigation";
 import type { Metadata } from "next";
+import { marked } from "marked";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -27,6 +28,7 @@ export default async function BlogPostPage({ params }: Props) {
   if (!post) notFound();
 
   const { frontmatter, content } = post;
+  const htmlContent = await marked(content);
   const allPosts = getBlogPosts();
   const recent = allPosts.filter((p) => p.slug !== slug).slice(0, 5);
 
@@ -46,8 +48,8 @@ export default async function BlogPostPage({ params }: Props) {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-16">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-          <article className="lg:col-span-2 prose prose-gray max-w-none">
-            <p className="text-gray-700 leading-relaxed whitespace-pre-line">{content}</p>
+          <article className="lg:col-span-2 blog-content max-w-none">
+            <div dangerouslySetInnerHTML={{ __html: htmlContent }} />
           </article>
 
           {/* Sidebar */}
