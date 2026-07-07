@@ -43,7 +43,6 @@ export default function ProjectCarousel({ images, title }: Props) {
             alt={`${title} ${current + 1}`}
             fill
             className="object-cover transition-opacity duration-300"
-            unoptimized
           />
 
           {images.length > 1 && (
@@ -91,7 +90,6 @@ export default function ProjectCarousel({ images, title }: Props) {
                   alt={`${title} ${i + 1}`}
                   fill
                   className="object-cover"
-                  unoptimized
                 />
               </button>
             ))}
@@ -129,7 +127,6 @@ export default function ProjectCarousel({ images, title }: Props) {
               alt={`${title} ${current + 1}`}
               fill
               className="object-contain"
-              unoptimized
             />
           </div>
 

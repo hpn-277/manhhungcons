@@ -59,7 +59,6 @@ export default function HeroCarousel() {
             fill
             className="object-cover opacity-75"
             priority={i === 0}
-            unoptimized
           />
         </div>
       ))}

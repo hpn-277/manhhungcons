@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { useTranslations, useLocale } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { getBlogPosts } from "@/lib/content";
@@ -26,9 +27,9 @@ export default function BlogPage() {
                 const excerpt = locale === "en" ? post.frontmatter.excerptEn || post.frontmatter.excerpt : post.frontmatter.excerpt;
                 return (
                   <article key={post.slug} className="group">
-                    <div className="bg-gray-100 aspect-[16/9] rounded-xl mb-4 overflow-hidden">
+                    <div className="relative bg-gray-100 aspect-[16/9] rounded-xl mb-4 overflow-hidden">
                       {post.frontmatter.image && (
-                        <img src={post.frontmatter.image} alt={title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                        <Image src={post.frontmatter.image} alt={title} fill className="object-cover group-hover:scale-105 transition-transform duration-300" />
                       )}
                     </div>
                     <div className="flex flex-wrap gap-2 mb-2">

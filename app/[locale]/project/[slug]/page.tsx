@@ -54,7 +54,6 @@ export default async function ProjectDetailPage({ params }: Props) {
             alt={frontmatter.title}
             fill
             className="object-cover opacity-50"
-            unoptimized
           />
         )}
         <div className="absolute inset-0 hero-overlay" />
