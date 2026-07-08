@@ -4,6 +4,8 @@ import ContactForm from "@/components/ui/ContactForm";
 
 export const metadata: Metadata = {
   title: "Liên Hệ",
+  description:
+    "Liên hệ Xây Dựng Mạnh Hùng để được tư vấn, báo giá dịch vụ thi công, xây dựng nhà ở, nhà xưởng tại Bà Rịa - Vũng Tàu.",
 };
 
 export default function ContactPage() {

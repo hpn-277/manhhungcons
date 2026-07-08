@@ -100,12 +100,12 @@ const serviceData: Record<string, ServiceContent> = {
   },
 
   "xay-dung-biet-thu-mini-nha-cap-4-tron-goi": {
-    title: "Xây Dựng Nhà Phố & Biệt Thự Trọn Gói",
-    titleEn: "Townhouse & Villa Construction",
+    title: "Dịch Vụ Thi Công Xây Dựng Nhà Ở, Nhà Phố & Biệt Thự Trọn Gói",
+    titleEn: "Residential, Townhouse & Villa Construction Service",
     icon: "🏠",
     category: "residential",
-    intro: "Từ xưa đến nay, \"An cư lạc nghiệp\" luôn là vấn đề lớn của mỗi người chúng ta. Công Ty TNHH Xây Dựng Mạnh Hùng mong muốn được xắn tay cùng quý khách giải quyết bài toán lớn của cả cuộc đời – xây dựng ngôi nhà mơ ước với kinh phí hợp lý nhất và sự hài lòng cao nhất.",
-    introEn: "Manh Hung Construction Co., Ltd. is here to help you solve one of life's biggest challenges — building your dream home at the most reasonable cost and with the highest satisfaction.",
+    intro: "Từ xưa đến nay, \"An cư lạc nghiệp\" luôn là vấn đề lớn của mỗi người chúng ta. Công Ty TNHH Xây Dựng Mạnh Hùng nhận thi công, xây dựng nhà ở, nhà phố, nhà cấp 4, biệt thự trọn gói tại Bà Rịa - Vũng Tàu, đồng hành cùng quý khách giải quyết bài toán lớn của cả cuộc đời – xây dựng ngôi nhà mơ ước với kinh phí hợp lý nhất và sự hài lòng cao nhất.",
+    introEn: "Manh Hung Construction Co., Ltd. provides residential, townhouse, and villa construction services in Ba Ria - Vung Tau, helping you solve one of life's biggest challenges — building your dream home at the most reasonable cost and with the highest satisfaction.",
     pricing: "6.000.000 – 8.000.000 đ/m²",
     pricingNote: "Diện tích nhà càng lớn, thiết kế càng đơn giản thì giá càng thấp.",
     pricingNoteEn: "Larger area with simpler design = lower price per m².",
@@ -363,7 +363,9 @@ const serviceData: Record<string, ServiceContent> = {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const data = serviceData[slug];
-  return { title: data?.title ?? slug };
+  if (!data) return { title: slug };
+  const description = `${data.title} tại Bà Rịa - Vũng Tàu. ${data.intro}`.slice(0, 160);
+  return { title: data.title, description };
 }
 
 export default async function ServiceDetailPage({ params }: Props) {

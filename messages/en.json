@@ -10,7 +10,7 @@
   },
   "home": {
     "heroTagline": "Building Lasting Structures",
-    "heroSubtitle": "Specializing in industrial facilities, villas, and infrastructure in Ba Ria - Vung Tau",
+    "heroSubtitle": "Specializing in construction of industrial facilities, residential homes, villas, and infrastructure in Ba Ria - Vung Tau",
     "viewProjects": "View Projects",
     "contactUs": "Contact Us",
     "stats": {
@@ -55,7 +55,8 @@
     "missionTitle": "Mission",
     "visionTitle": "Vision",
     "valuesTitle": "Core Values",
-    "workflowTitle": "Our Process"
+    "workflowTitle": "Our Process",
+    "areasTitle": "Service Areas"
   },
   "projects": {
     "title": "Our Projects",

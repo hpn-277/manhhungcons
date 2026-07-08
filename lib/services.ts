@@ -11,12 +11,12 @@ export const services = [
   },
   {
     slug: "xay-dung-biet-thu-mini-nha-cap-4-tron-goi",
-    title: "Xây Dựng Nhà Phố & Biệt Thự Trọn Gói",
-    titleEn: "Townhouse & Villa Construction",
+    title: "Dịch Vụ Thi Công Xây Dựng Nhà Ở, Nhà Phố & Biệt Thự Trọn Gói",
+    titleEn: "Residential, Townhouse & Villa Construction Service",
     icon: "🏠",
     pricing: "Từ 6.000.000 đ/m²",
-    excerpt: "Xây dựng trọn gói từ móng đến hoàn thiện. Bảo hành kết cấu 12 tháng, hệ thống điện nước 5 năm. Diện tích càng lớn, chi phí càng tối ưu.",
-    excerptEn: "Complete build from foundation to finishing. 12-month structural warranty, 5-year electrical/plumbing. Larger area = lower cost per m².",
+    excerpt: "Nhận thi công, xây dựng nhà ở, nhà phố, nhà cấp 4, biệt thự trọn gói từ móng đến hoàn thiện tại Bà Rịa - Vũng Tàu. Bảo hành kết cấu 12 tháng, hệ thống điện nước 5 năm. Diện tích càng lớn, chi phí càng tối ưu.",
+    excerptEn: "Full-service residential, townhouse, and villa construction from foundation to finishing in Ba Ria - Vung Tau. 12-month structural warranty, 5-year electrical/plumbing. Larger area = lower cost per m².",
     category: "residential",
   },
   {

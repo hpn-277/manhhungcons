@@ -23,7 +23,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const project = getProject(slug);
   if (!project) return {};
-  return { title: project.frontmatter.title };
+  const { title, location, excerpt } = project.frontmatter;
+  const description = `${title} tại ${location}. ${excerpt}`.slice(0, 160);
+  return { title, description };
 }
 
 const categoryLabels: Record<string, { vi: string; en: string }> = {

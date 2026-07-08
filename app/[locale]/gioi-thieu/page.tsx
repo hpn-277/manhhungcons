@@ -3,6 +3,8 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Giới Thiệu",
+  description:
+    "Công Ty TNHH Xây Dựng Mạnh Hùng - Hơn 15 năm kinh nghiệm thi công, xây dựng nhà ở, nhà xưởng công nghiệp tại Bà Rịa - Vũng Tàu.",
 };
 
 const timeline = [
@@ -71,6 +73,19 @@ export default function AboutPage() {
               ))}
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Service Areas */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+          <h2 className="text-3xl font-black text-gray-900 mb-2">{t("areasTitle")}</h2>
+          <div className="w-12 h-1 bg-orange-500 mx-auto mb-8" />
+          <p className="text-gray-600 leading-relaxed">
+            Mạnh Hùng nhận thi công, xây dựng nhà ở, nhà xưởng và hạ tầng kỹ thuật tại Chu Hải, Mỹ Xuân, Tóc Tiên,
+            Hắc Dịch, Châu Pha, Láng Cát, Phường Phú Mỹ, Tân Thành (Thị xã Phú Mỹ, Bà Rịa - Vũng Tàu), KCN Phú Mỹ 3,
+            KCN Đông Xuyên và các khu công nghiệp lân cận tại Đồng Nai.
+          </p>
         </div>
       </section>
 

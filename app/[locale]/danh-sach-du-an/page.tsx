@@ -1,6 +1,13 @@
 import { useTranslations } from "next-intl";
 import { getProjects } from "@/lib/content";
 import ProjectsFilter from "@/components/ui/ProjectsFilter";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Công Trình Đã Thực Hiện",
+  description:
+    "Các công trình thi công, xây dựng nhà ở, nhà xưởng, hạ tầng kỹ thuật tiêu biểu của Mạnh Hùng tại Bà Rịa - Vũng Tàu.",
+};
 
 export default function ProjectsPage() {
   const t = useTranslations("projects");

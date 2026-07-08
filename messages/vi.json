@@ -10,7 +10,7 @@
   },
   "home": {
     "heroTagline": "Kiến Tạo Công Trình Bền Vững",
-    "heroSubtitle": "Chuyên xây dựng nhà xưởng công nghiệp, biệt thự, cơ sở hạ tầng tại Bà Rịa - Vũng Tàu",
+    "heroSubtitle": "Chuyên thi công, xây dựng nhà xưởng công nghiệp, nhà ở, biệt thự, cơ sở hạ tầng tại Bà Rịa - Vũng Tàu",
     "viewProjects": "Xem Công Trình",
     "contactUs": "Liên Hệ Ngay",
     "stats": {
@@ -20,7 +20,7 @@
       "clients": "Khách Hàng"
     },
     "servicesTitle": "Dịch Vụ Của Chúng Tôi",
-    "servicesSubtitle": "Cung cấp giải pháp xây dựng toàn diện cho mọi công trình",
+    "servicesSubtitle": "Cung cấp giải pháp thi công, xây dựng toàn diện cho mọi công trình",
     "projectsTitle": "Công Trình Nổi Bật",
     "projectsSubtitle": "Những công trình tiêu biểu chúng tôi đã thực hiện",
     "whyTitle": "Tại Sao Chọn Chúng Tôi",
@@ -55,7 +55,8 @@
     "missionTitle": "Sứ Mệnh",
     "visionTitle": "Tầm Nhìn",
     "valuesTitle": "Giá Trị Cốt Lõi",
-    "workflowTitle": "Quy Trình Làm Việc"
+    "workflowTitle": "Quy Trình Làm Việc",
+    "areasTitle": "Khu Vực Hoạt Động"
   },
   "projects": {
     "title": "Công Trình Đã Thực Hiện",
@@ -74,7 +75,7 @@
   },
   "services": {
     "title": "Dịch Vụ",
-    "subtitle": "Giải Pháp Xây Dựng Toàn Diện",
+    "subtitle": "Giải Pháp Thi Công - Xây Dựng Toàn Diện",
     "learnMore": "Tìm Hiểu Thêm",
     "requestQuote": "Yêu Cầu Báo Giá"
   },

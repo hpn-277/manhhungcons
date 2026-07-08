@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     template: "%s | Xây Dựng Mạnh Hùng",
   },
   description:
-    "Công Ty TNHH Xây Dựng Mạnh Hùng - Chuyên xây dựng nhà xưởng, công trình công nghiệp và dân dụng tại Bà Rịa - Vũng Tàu",
+    "Công Ty TNHH Xây Dựng Mạnh Hùng - Dịch vụ thi công, xây dựng nhà xưởng, nhà ở, công trình công nghiệp và dân dụng tại Bà Rịa - Vũng Tàu",
   metadataBase: new URL(SITE_URL),
 };
 
