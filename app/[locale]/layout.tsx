@@ -5,6 +5,7 @@ import { getMessages } from "next-intl/server";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import type { Metadata } from "next";
+import { SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: {
@@ -13,7 +14,7 @@ export const metadata: Metadata = {
   },
   description:
     "Công Ty TNHH Xây Dựng Mạnh Hùng - Chuyên xây dựng nhà xưởng, công trình công nghiệp và dân dụng tại Bà Rịa - Vũng Tàu",
-  metadataBase: new URL("https://xaydungmanhhung.vn"),
+  metadataBase: new URL(SITE_URL),
 };
 
 export function generateStaticParams() {
