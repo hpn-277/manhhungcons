@@ -10,6 +10,13 @@ type ChangeFrequency = NonNullable<
   MetadataRoute.Sitemap[number]["changeFrequency"]
 >;
 
+// Default locale ("vi") has no URL prefix (localePrefix: "as-needed"); only
+// non-default locales are prefixed, e.g. "/en".
+function localePath(locale: string, path: string): string {
+  if (locale === routing.defaultLocale) return path === "" ? "/" : path;
+  return `/${locale}${path}`;
+}
+
 function localizedEntry(
   path: string,
   opts: {
@@ -19,10 +26,10 @@ function localizedEntry(
   }
 ): MetadataRoute.Sitemap {
   const languages = Object.fromEntries(
-    LOCALES.map((locale) => [locale, `${SITE_URL}/${locale}${path}`])
+    LOCALES.map((locale) => [locale, `${SITE_URL}${localePath(locale, path)}`])
   );
   return LOCALES.map((locale) => ({
-    url: `${SITE_URL}/${locale}${path}`,
+    url: `${SITE_URL}${localePath(locale, path)}`,
     lastModified: opts.lastModified ?? new Date(),
     changeFrequency: opts.changeFrequency,
     priority: opts.priority,
