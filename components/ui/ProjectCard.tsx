@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Link } from "@/i18n/navigation";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import type { ProjectFrontmatter } from "@/lib/content";
 
 interface Props {
@@ -8,20 +8,13 @@ interface Props {
   frontmatter: ProjectFrontmatter;
 }
 
-const categoryLabels: Record<string, { vi: string; en: string }> = {
-  industrial: { vi: "Công Nghiệp", en: "Industrial" },
-  residential: { vi: "Dân Dụng", en: "Residential" },
-  infrastructure: { vi: "Hạ Tầng", en: "Infrastructure" },
-  maintenance: { vi: "Bảo Trì", en: "Maintenance" },
-};
-
 export default function ProjectCard({ slug, frontmatter }: Props) {
   const locale = useLocale();
+  const t = useTranslations("projects");
   const title = locale === "en" ? frontmatter.titleEn || frontmatter.title : frontmatter.title;
   const excerpt = locale === "en" ? frontmatter.excerptEn || frontmatter.excerpt : frontmatter.excerpt;
-  const catLabel = categoryLabels[frontmatter.category]?.[locale as "vi" | "en"] ?? frontmatter.category;
+  const catLabel = t(frontmatter.category);
   const heroImage = frontmatter.images?.[0];
-  console.log('heroImage', heroImage)
   return (
     <Link href={`/project/${slug}`} className="group block">
       <div className="relative overflow-hidden rounded-lg bg-gray-100 aspect-[4/3]">

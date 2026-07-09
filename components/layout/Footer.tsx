@@ -8,11 +8,11 @@ export default function Footer() {
   const t = useTranslations("footer");
 
   const services = [
-    { href: "/dich-vu/sua-chua-bao-tri", label: "Sửa Chữa & Bảo Trì" },
-    { href: "/dich-vu/xay-dung-biet-thu-mini-nha-cap-4-tron-goi", label: "Biệt Thự & Nhà Ở" },
-    { href: "/dich-vu/xay-dung-co-so-ha-tang-ky-thuat", label: "Cơ Sở Hạ Tầng" },
-{ href: "/dich-vu/xay-dung-nha-xuong", label: "Xây Dựng Nhà Xưởng" },
-    { href: "/dich-vu/duc-pha-be-tong-thao-do-nha-xuong", label: "Đục Phá & Tháo Dỡ" },
+    { href: "/dich-vu/sua-chua-bao-tri", label: t("serviceLinks.repair") },
+    { href: "/dich-vu/xay-dung-biet-thu-mini-nha-cap-4-tron-goi", label: t("serviceLinks.residential") },
+    { href: "/dich-vu/xay-dung-co-so-ha-tang-ky-thuat", label: t("serviceLinks.infrastructure") },
+    { href: "/dich-vu/xay-dung-nha-xuong", label: t("serviceLinks.factory") },
+    { href: "/dich-vu/duc-pha-be-tong-thao-do-nha-xuong", label: t("serviceLinks.demolition") },
   ];
 
   return (
@@ -76,11 +76,11 @@ export default function Footer() {
               <MdLocationOn className="text-orange-500 mt-0.5 shrink-0" size={18} />
               <div className="space-y-1">
                 <div>
-                  <span className="text-gray-500 text-xs uppercase tracking-wide">Địa chỉ thuế</span>
+                  <span className="text-gray-500 text-xs uppercase tracking-wide">{t("taxAddressLabel")}</span>
                   <p>107B Khu phố Chu Hải, Phường Tân Hải, TP Hồ Chí Minh, Việt Nam</p>
                 </div>
                 <div>
-                  <span className="text-gray-500 text-xs uppercase tracking-wide">Địa chỉ văn phòng</span>
+                  <span className="text-gray-500 text-xs uppercase tracking-wide">{t("officeAddressLabel")}</span>
                   <p>107B Khu phố Chu Hải, Phường Tân Hải, Thành Phố Phú Mỹ, Tỉnh Bà Rịa - Vũng Tàu, Việt Nam</p>
                 </div>
               </div>
@@ -99,7 +99,7 @@ export default function Footer() {
             </li>
             <li className="flex gap-2 items-center">
               <MdAccessTime className="text-orange-500 shrink-0" size={18} />
-              <span>Thứ 2 - Thứ 7: 7:00 - 18:00</span>
+              <span>{t("hoursValue")}</span>
             </li>
           </ul>
         </div>

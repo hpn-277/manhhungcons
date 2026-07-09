@@ -30,7 +30,7 @@ export default async function ContactPage({ params }: Props) {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Info */}
             <div>
-              <h2 className="text-2xl font-black text-gray-900 mb-8">Thông Tin Liên Hệ</h2>
+              <h2 className="text-2xl font-black text-gray-900 mb-8">{t("infoTitle")}</h2>
               <ul className="space-y-6">
                 <li className="flex gap-4">
                   <div className="w-10 h-10 bg-orange-100 rounded-lg flex items-center justify-center text-orange-500 shrink-0">
@@ -39,8 +39,8 @@ export default async function ContactPage({ params }: Props) {
                   <div>
                     <div className="font-semibold text-gray-900 mb-1">{t("address")}</div>
                     <div className="text-gray-500 text-sm space-y-1">
-                      <p><span className="font-medium text-gray-600">Địa chỉ thuế:</span> 107B Khu phố Chu Hải, Phường Tân Hải, TP Hồ Chí Minh, Việt Nam</p>
-                      <p><span className="font-medium text-gray-600">Văn phòng:</span> 107B Khu phố Chu Hải, Phường Tân Hải, Thành Phố Phú Mỹ, Tỉnh Bà Rịa - Vũng Tàu, Việt Nam</p>
+                      <p><span className="font-medium text-gray-600">{t("taxAddressLabel")}:</span> 107B Khu phố Chu Hải, Phường Tân Hải, TP Hồ Chí Minh, Việt Nam</p>
+                      <p><span className="font-medium text-gray-600">{t("officeAddressLabel")}:</span> 107B Khu phố Chu Hải, Phường Tân Hải, Thành Phố Phú Mỹ, Tỉnh Bà Rịa - Vũng Tàu, Việt Nam</p>
                     </div>
                   </div>
                 </li>
@@ -76,8 +76,8 @@ export default async function ContactPage({ params }: Props) {
                   </div>
                   <div>
                     <div className="font-semibold text-gray-900 mb-1">{t("hours")}</div>
-                    <div className="text-gray-500 text-sm">Thứ 2 - Thứ 7: 7:00 - 18:00</div>
-                    <div className="text-gray-400 text-xs">Chủ Nhật: Nghỉ</div>
+                    <div className="text-gray-500 text-sm">{t("hoursValue")}</div>
+                    <div className="text-gray-400 text-xs">{t("hoursSunday")}</div>
                   </div>
                 </li>
               </ul>

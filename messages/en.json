@@ -46,17 +46,22 @@
     "clientsTitle": "Partners & Clients",
     "ctaBanner": "Ready to Start Your Project?",
     "ctaDesc": "Contact us now for free consultation and quotation",
-    "ctaButton": "Request a Quote"
+    "ctaButton": "Request a Quote",
+    "viewAll": "View All →"
   },
   "about": {
     "title": "About Us",
     "subtitle": "Manh Hung Construction - 15 Years of Proven Expertise",
     "historyTitle": "Our History",
     "missionTitle": "Mission",
+    "missionDesc": "Contributing to national development through construction, driving industrialization and modernization.",
     "visionTitle": "Vision",
+    "visionDesc": "Becoming a leading Vietnamese enterprise in construction and infrastructure development.",
     "valuesTitle": "Core Values",
+    "valuesDesc": "Knowledge - Creativity - Dedication. Three core values guiding everything we do.",
     "workflowTitle": "Our Process",
-    "areasTitle": "Service Areas"
+    "areasTitle": "Service Areas",
+    "areasDesc": "Manh Hung provides construction services for homes, factories, and technical infrastructure in Chu Hai, My Xuan, Toc Tien, Hac Dich, Chau Pha, Lang Cat, Phu My Ward, Tan Thanh (Phu My Town, Ba Ria - Vung Tau), Phu My 3 Industrial Park, Dong Xuyen Industrial Park, and neighboring industrial zones in Dong Nai."
   },
   "projects": {
     "title": "Our Projects",
@@ -71,7 +76,10 @@
     "year": "Year",
     "location": "Location",
     "category": "Category",
-    "relatedProjects": "Related Projects"
+    "relatedProjects": "Related Projects",
+    "descriptionTitle": "Project Description",
+    "infoTitle": "Project Information",
+    "contactCta": "Contact for Consultation"
   },
   "services": {
     "title": "Services",
@@ -83,22 +91,31 @@
     "title": "News",
     "subtitle": "Construction knowledge and updates",
     "readMore": "Read More",
-    "recentPosts": "Recent Posts"
+    "recentPosts": "Recent Posts",
+    "consultTitle": "Need Advice?",
+    "contactButton": "Contact Us"
   },
   "contact": {
     "title": "Contact",
     "subtitle": "We are always ready to assist you",
+    "infoTitle": "Contact Information",
     "address": "Address",
+    "taxAddressLabel": "Tax Address",
+    "officeAddressLabel": "Office",
     "phone": "Phone",
     "email": "Email",
     "hours": "Business Hours",
-    "hoursValue": "Mon - Fri: 8:00 AM - 6:00 PM",
+    "hoursValue": "Mon - Sat: 7:00 AM - 6:00 PM",
+    "hoursSunday": "Closed on Sundays",
+    "formTitle": "Send Message",
     "formName": "Full Name",
     "formEmail": "Email",
     "formSubject": "Subject",
     "formMessage": "Message",
     "formSend": "Send Message",
-    "formSuccess": "Message sent successfully!"
+    "formSending": "Sending...",
+    "formSuccess": "Message sent successfully!",
+    "formError": "Failed to send. Please try again."
   },
   "footer": {
     "company": "Manh Hung Construction Co., Ltd.",
@@ -106,6 +123,16 @@
     "rights": "© 2009-2025 Manh Hung. All rights reserved.",
     "services": "Services",
     "contact": "Contact Info",
-    "followUs": "Follow Us"
+    "followUs": "Follow Us",
+    "taxAddressLabel": "Tax Address",
+    "officeAddressLabel": "Office Address",
+    "hoursValue": "Mon - Sat: 7:00 AM - 6:00 PM",
+    "serviceLinks": {
+      "repair": "Maintenance & Repairs",
+      "residential": "Villas & Homes",
+      "infrastructure": "Infrastructure",
+      "factory": "Factory Construction",
+      "demolition": "Demolition & Removal"
+    }
   }
 }

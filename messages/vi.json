@@ -46,17 +46,22 @@
     "clientsTitle": "Đối Tác & Khách Hàng",
     "ctaBanner": "Sẵn Sàng Bắt Đầu Công Trình?",
     "ctaDesc": "Liên hệ ngay để nhận tư vấn và báo giá miễn phí",
-    "ctaButton": "Yêu Cầu Báo Giá"
+    "ctaButton": "Yêu Cầu Báo Giá",
+    "viewAll": "Xem Tất Cả →"
   },
   "about": {
     "title": "Giới Thiệu Công Ty",
     "subtitle": "Xây Dựng Mạnh Hùng - 15 Năm Khẳng Định Uy Tín",
     "historyTitle": "Lịch Sử Phát Triển",
     "missionTitle": "Sứ Mệnh",
+    "missionDesc": "Đóng góp vào sự phát triển đất nước thông qua sự nghiệp xây dựng, thực hiện công nghiệp hóa và hiện đại hóa.",
     "visionTitle": "Tầm Nhìn",
+    "visionDesc": "Trở thành doanh nghiệp Việt Nam hàng đầu trong lĩnh vực xây dựng và phát triển cơ sở hạ tầng.",
     "valuesTitle": "Giá Trị Cốt Lõi",
+    "valuesDesc": "Tri thức - Sáng tạo - Tận tâm. Ba giá trị cốt lõi định hướng mọi hoạt động của chúng tôi.",
     "workflowTitle": "Quy Trình Làm Việc",
-    "areasTitle": "Khu Vực Hoạt Động"
+    "areasTitle": "Khu Vực Hoạt Động",
+    "areasDesc": "Mạnh Hùng nhận thi công, xây dựng nhà ở, nhà xưởng và hạ tầng kỹ thuật tại Chu Hải, Mỹ Xuân, Tóc Tiên, Hắc Dịch, Châu Pha, Láng Cát, Phường Phú Mỹ, Tân Thành (Thị xã Phú Mỹ, Bà Rịa - Vũng Tàu), KCN Phú Mỹ 3, KCN Đông Xuyên và các khu công nghiệp lân cận tại Đồng Nai."
   },
   "projects": {
     "title": "Công Trình Đã Thực Hiện",
@@ -71,7 +76,10 @@
     "year": "Năm",
     "location": "Địa Điểm",
     "category": "Hạng Mục",
-    "relatedProjects": "Công Trình Liên Quan"
+    "relatedProjects": "Công Trình Liên Quan",
+    "descriptionTitle": "Mô Tả Dự Án",
+    "infoTitle": "Thông Tin Dự Án",
+    "contactCta": "Liên Hệ Tư Vấn"
   },
   "services": {
     "title": "Dịch Vụ",
@@ -83,22 +91,31 @@
     "title": "Tin Tức",
     "subtitle": "Cập nhật kiến thức và thông tin xây dựng",
     "readMore": "Đọc Thêm",
-    "recentPosts": "Bài Viết Gần Đây"
+    "recentPosts": "Bài Viết Gần Đây",
+    "consultTitle": "Cần Tư Vấn?",
+    "contactButton": "Liên Hệ Ngay"
   },
   "contact": {
     "title": "Liên Hệ",
     "subtitle": "Chúng tôi luôn sẵn sàng hỗ trợ bạn",
+    "infoTitle": "Thông Tin Liên Hệ",
     "address": "Địa Chỉ",
+    "taxAddressLabel": "Địa chỉ thuế",
+    "officeAddressLabel": "Văn phòng",
     "phone": "Điện Thoại",
     "email": "Email",
     "hours": "Giờ Làm Việc",
-    "hoursValue": "Thứ 2 - Thứ 6: 8:00 - 18:00",
+    "hoursValue": "Thứ 2 - Thứ 7: 7:00 - 18:00",
+    "hoursSunday": "Chủ Nhật: Nghỉ",
+    "formTitle": "Gửi Tin Nhắn",
     "formName": "Họ Tên",
     "formEmail": "Email",
     "formSubject": "Tiêu Đề",
     "formMessage": "Nội Dung",
     "formSend": "Gửi Tin Nhắn",
-    "formSuccess": "Tin nhắn đã được gửi thành công!"
+    "formSending": "Đang gửi...",
+    "formSuccess": "Tin nhắn đã được gửi thành công!",
+    "formError": "Gửi thất bại. Vui lòng thử lại."
   },
   "footer": {
     "company": "Công Ty TNHH Xây Dựng Mạnh Hùng",
@@ -106,6 +123,16 @@
     "rights": "© 2009-2025 Mạnh Hùng. Bảo lưu mọi quyền.",
     "services": "Dịch Vụ",
     "contact": "Thông Tin Liên Hệ",
-    "followUs": "Theo Dõi Chúng Tôi"
+    "followUs": "Theo Dõi Chúng Tôi",
+    "taxAddressLabel": "Địa chỉ thuế",
+    "officeAddressLabel": "Địa chỉ văn phòng",
+    "hoursValue": "Thứ 2 - Thứ 7: 7:00 - 18:00",
+    "serviceLinks": {
+      "repair": "Sửa Chữa & Bảo Trì",
+      "residential": "Biệt Thự & Nhà Ở",
+      "infrastructure": "Cơ Sở Hạ Tầng",
+      "factory": "Xây Dựng Nhà Xưởng",
+      "demolition": "Đục Phá & Tháo Dỡ"
+    }
   }
 }

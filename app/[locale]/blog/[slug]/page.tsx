@@ -1,6 +1,5 @@
 import { notFound } from "next/navigation";
-import { useLocale, useTranslations } from "next-intl";
-import { setRequestLocale } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { getBlogPost, getBlogPosts } from "@/lib/content";
 import { Link } from "@/i18n/navigation";
 import type { Metadata } from "next";
@@ -30,7 +29,11 @@ export default async function BlogPostPage({ params }: Props) {
   const post = getBlogPost(slug);
   if (!post) notFound();
 
+  const t = await getTranslations("blog");
+  const isEn = locale === "en";
+
   const { frontmatter, content } = post;
+  const title = isEn ? frontmatter.titleEn || frontmatter.title : frontmatter.title;
   const htmlContent = await marked(content);
   const allPosts = getBlogPosts();
   const recent = allPosts.filter((p) => p.slug !== slug).slice(0, 5);
@@ -45,7 +48,7 @@ export default async function BlogPostPage({ params }: Props) {
             </span>
           ))}
         </div>
-        <h1 className="text-3xl lg:text-4xl font-black text-gray-900 mb-3">{frontmatter.title}</h1>
+        <h1 className="text-3xl lg:text-4xl font-black text-gray-900 mb-3">{title}</h1>
         <p className="text-gray-400 text-sm">{frontmatter.date}</p>
       </div>
 
@@ -58,7 +61,7 @@ export default async function BlogPostPage({ params }: Props) {
           {/* Sidebar */}
           <aside>
             <div className="sticky top-24">
-              <h3 className="font-bold text-gray-900 mb-4">Bài Viết Gần Đây</h3>
+              <h3 className="font-bold text-gray-900 mb-4">{t("recentPosts")}</h3>
               <ul className="space-y-4">
                 {recent.map((p) => (
                   <li key={p.slug}>
@@ -66,7 +69,7 @@ export default async function BlogPostPage({ params }: Props) {
                       href={`/blog/${p.slug}`}
                       className="text-sm text-gray-700 hover:text-orange-500 transition-colors leading-snug block"
                     >
-                      {p.frontmatter.title}
+                      {isEn ? p.frontmatter.titleEn || p.frontmatter.title : p.frontmatter.title}
                     </Link>
                     <span className="text-xs text-gray-400">{p.frontmatter.date}</span>
                   </li>
@@ -74,12 +77,12 @@ export default async function BlogPostPage({ params }: Props) {
               </ul>
 
               <div className="mt-8 p-4 bg-orange-50 rounded-xl border border-orange-100">
-                <h4 className="font-bold text-gray-900 mb-2 text-sm">Cần tư vấn?</h4>
+                <h4 className="font-bold text-gray-900 mb-2 text-sm">{t("consultTitle")}</h4>
                 <Link
                   href="/lien-he"
                   className="block text-center bg-orange-500 text-white text-sm font-semibold py-2 rounded-lg hover:bg-orange-600 transition-colors"
                 >
-                  Liên Hệ Ngay
+                  {t("contactButton")}
                 </Link>
               </div>
             </div>

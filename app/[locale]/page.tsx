@@ -71,7 +71,7 @@ export default async function HomePage({ params }: Props) {
               href="/danh-sach-du-an"
               className="text-orange-500 hover:text-orange-600 font-semibold text-sm whitespace-nowrap"
             >
-              {locale === "vi" ? "Xem tất cả →" : "View all →"}
+              {t("viewAll")}
             </Link>
           </div>
           {featuredProjects.length > 0 ? (

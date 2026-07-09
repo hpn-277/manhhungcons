@@ -23,13 +23,13 @@ export default function ContactForm() {
     if (res.ok) {
       setSent(true);
     } else {
-      setError("Gửi thất bại. Vui lòng thử lại.");
+      setError(t("formError"));
     }
   };
 
   return (
     <div>
-      <h2 className="text-2xl font-black text-gray-900 mb-8">Gửi Tin Nhắn</h2>
+      <h2 className="text-2xl font-black text-gray-900 mb-8">{t("formTitle")}</h2>
       {sent && (
         <div className="bg-green-50 border border-green-200 rounded-xl p-4 mb-4 flex items-center gap-3">
           <span className="text-2xl">✅</span>
@@ -83,7 +83,7 @@ export default function ContactForm() {
           disabled={loading}
           className="w-full bg-orange-500 hover:bg-orange-600 disabled:opacity-60 text-white font-bold py-3 rounded-lg transition-colors"
         >
-          {loading ? "Đang gửi..." : t("formSend")}
+          {loading ? t("formSending") : t("formSend")}
         </button>
       </form>
     </div>

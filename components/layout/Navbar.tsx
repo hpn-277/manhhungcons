@@ -47,7 +47,7 @@ export default function Navbar() {
             alt="Xây Dựng Mạnh Hùng"
             width={150}
             height={150}
-            className="rounded object-contain"
+            className="rounded object-contain "
           />
           {/* <span
             className={`font-bold text-lg leading-tight hidden sm:block ${

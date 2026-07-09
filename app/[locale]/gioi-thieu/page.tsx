@@ -33,6 +33,7 @@ export default async function AboutPage({ params }: Props) {
   setRequestLocale(locale);
 
   const t = await getTranslations("about");
+  const isEn = locale === "en";
 
   return (
     <>
@@ -46,9 +47,9 @@ export default async function AboutPage({ params }: Props) {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { icon: "🎯", title: t("missionTitle"), desc: "Đóng góp vào sự phát triển đất nước thông qua sự nghiệp xây dựng, thực hiện công nghiệp hóa và hiện đại hóa." },
-              { icon: "👁️", title: t("visionTitle"), desc: "Trở thành doanh nghiệp Việt Nam hàng đầu trong lĩnh vực xây dựng và phát triển cơ sở hạ tầng." },
-              { icon: "💎", title: t("valuesTitle"), desc: "Tri thức - Sáng tạo - Tận tâm. Ba giá trị cốt lõi định hướng mọi hoạt động của chúng tôi." },
+              { icon: "🎯", title: t("missionTitle"), desc: t("missionDesc") },
+              { icon: "👁️", title: t("visionTitle"), desc: t("visionDesc") },
+              { icon: "💎", title: t("valuesTitle"), desc: t("valuesDesc") },
             ].map((item) => (
               <div key={item.title} className="bg-gray-50 rounded-xl p-8 text-center border border-gray-100">
                 <div className="text-4xl mb-4">{item.icon}</div>
@@ -74,7 +75,7 @@ export default async function AboutPage({ params }: Props) {
                     {item.year}
                   </div>
                   <div className="pt-4">
-                    <p className="text-gray-700 leading-relaxed">{item.event}</p>
+                    <p className="text-gray-700 leading-relaxed">{isEn ? item.eventEn : item.event}</p>
                   </div>
                 </div>
               ))}
@@ -88,11 +89,7 @@ export default async function AboutPage({ params }: Props) {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
           <h2 className="text-3xl font-black text-gray-900 mb-2">{t("areasTitle")}</h2>
           <div className="w-12 h-1 bg-orange-500 mx-auto mb-8" />
-          <p className="text-gray-600 leading-relaxed">
-            Mạnh Hùng nhận thi công, xây dựng nhà ở, nhà xưởng và hạ tầng kỹ thuật tại Chu Hải, Mỹ Xuân, Tóc Tiên,
-            Hắc Dịch, Châu Pha, Láng Cát, Phường Phú Mỹ, Tân Thành (Thị xã Phú Mỹ, Bà Rịa - Vũng Tàu), KCN Phú Mỹ 3,
-            KCN Đông Xuyên và các khu công nghiệp lân cận tại Đồng Nai.
-          </p>
+          <p className="text-gray-600 leading-relaxed">{t("areasDesc")}</p>
         </div>
       </section>
 
@@ -106,8 +103,8 @@ export default async function AboutPage({ params }: Props) {
               <div key={step.step} className="flex gap-4 p-6 bg-gray-50 rounded-xl border border-gray-100">
                 <div className="text-3xl font-black text-orange-200 shrink-0 leading-none">{step.step}</div>
                 <div>
-                  <h3 className="font-bold text-gray-900 mb-1">{step.title}</h3>
-                  <p className="text-gray-500 text-sm leading-relaxed">{step.desc}</p>
+                  <h3 className="font-bold text-gray-900 mb-1">{isEn ? step.titleEn : step.title}</h3>
+                  <p className="text-gray-500 text-sm leading-relaxed">{isEn ? step.descEn : step.desc}</p>
                 </div>
               </div>
             ))}
