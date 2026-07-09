@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import { useLocale, useTranslations } from "next-intl";
+import { setRequestLocale } from "next-intl/server";
 import { getProject, getProjects } from "@/lib/content";
 import { Link } from "@/i18n/navigation";
 import ProjectCard from "@/components/ui/ProjectCard";
@@ -36,7 +37,9 @@ const categoryLabels: Record<string, { vi: string; en: string }> = {
 };
 
 export default async function ProjectDetailPage({ params }: Props) {
-  const { slug } = await params;
+  const { slug, locale } = await params;
+  setRequestLocale(locale);
+
   const project = getProject(slug);
   if (!project) notFound();
 

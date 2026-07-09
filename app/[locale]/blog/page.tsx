@@ -1,14 +1,20 @@
 import Image from "next/image";
-import { useTranslations, useLocale } from "next-intl";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { getBlogPosts } from "@/lib/content";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = { title: "Tin Tức" };
 
-export default function BlogPage() {
-  const t = useTranslations("blog");
-  const locale = useLocale();
+interface Props {
+  params: Promise<{ locale: string }>;
+}
+
+export default async function BlogPage({ params }: Props) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
+  const t = await getTranslations("blog");
   const posts = getBlogPosts();
 
   return (

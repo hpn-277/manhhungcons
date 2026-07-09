@@ -1,4 +1,4 @@
-import { useTranslations, useLocale } from "next-intl";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import HeroCarousel from "@/components/sections/HeroCarousel";
 import StatCounter from "@/components/sections/StatCounter";
@@ -10,9 +10,15 @@ import ServiceCard from "@/components/ui/ServiceCard";
 import { getProjects } from "@/lib/content";
 import { services } from "@/lib/services";
 
-export default function HomePage() {
-  const t = useTranslations("home");
-  const locale = useLocale();
+interface Props {
+  params: Promise<{ locale: string }>;
+}
+
+export default async function HomePage({ params }: Props) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
+  const t = await getTranslations("home");
   const allProjects = getProjects();
   const featuredProjects = allProjects.slice(0, 6);
 

@@ -1,4 +1,4 @@
-import { useTranslations } from "next-intl";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import type { Metadata } from "next";
 import ContactForm from "@/components/ui/ContactForm";
 
@@ -8,8 +8,15 @@ export const metadata: Metadata = {
     "Liên hệ Xây Dựng Mạnh Hùng để được tư vấn, báo giá dịch vụ thi công, xây dựng nhà ở, nhà xưởng tại Bà Rịa - Vũng Tàu.",
 };
 
-export default function ContactPage() {
-  const t = useTranslations("contact");
+interface Props {
+  params: Promise<{ locale: string }>;
+}
+
+export default async function ContactPage({ params }: Props) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
+  const t = await getTranslations("contact");
 
   return (
     <>

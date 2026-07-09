@@ -1,4 +1,4 @@
-import { useTranslations, useLocale } from "next-intl";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import type { Metadata } from "next";
 import { services as defaultServices } from "@/lib/services";
@@ -9,9 +9,15 @@ export const metadata: Metadata = {
     "Dịch vụ thi công, xây dựng nhà ở, nhà xưởng công nghiệp, hạ tầng kỹ thuật, sửa chữa bảo trì công trình tại Bà Rịa - Vũng Tàu.",
 };
 
-export default function ServicesPage() {
-  const t = useTranslations("services");
-  const locale = useLocale();
+interface Props {
+  params: Promise<{ locale: string }>;
+}
+
+export default async function ServicesPage({ params }: Props) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
+  const t = await getTranslations("services");
 
   return (
     <>

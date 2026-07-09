@@ -1,4 +1,4 @@
-import { useTranslations } from "next-intl";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -24,8 +24,15 @@ const workflow = [
   { step: "06", title: "Bảo hành", titleEn: "Warranty", desc: "Hỗ trợ bảo hành và bảo trì sau khi bàn giao", descEn: "Post-handover warranty and maintenance support" },
 ];
 
-export default function AboutPage() {
-  const t = useTranslations("about");
+interface Props {
+  params: Promise<{ locale: string }>;
+}
+
+export default async function AboutPage({ params }: Props) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
+  const t = await getTranslations("about");
 
   return (
     <>

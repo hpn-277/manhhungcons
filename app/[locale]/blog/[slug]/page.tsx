@@ -1,12 +1,13 @@
 import { notFound } from "next/navigation";
 import { useLocale, useTranslations } from "next-intl";
+import { setRequestLocale } from "next-intl/server";
 import { getBlogPost, getBlogPosts } from "@/lib/content";
 import { Link } from "@/i18n/navigation";
 import type { Metadata } from "next";
 import { marked } from "marked";
 
 interface Props {
-  params: Promise<{ slug: string }>;
+  params: Promise<{ slug: string; locale: string }>;
 }
 
 export async function generateStaticParams() {
@@ -23,7 +24,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default async function BlogPostPage({ params }: Props) {
-  const { slug } = await params;
+  const { slug, locale } = await params;
+  setRequestLocale(locale);
+
   const post = getBlogPost(slug);
   if (!post) notFound();
 

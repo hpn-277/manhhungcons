@@ -1,12 +1,12 @@
 import { notFound } from "next/navigation";
-import { getLocale } from "next-intl/server";
+import { setRequestLocale } from "next-intl/server";
 import { getService, getServices, getProjects } from "@/lib/content";
 import ProjectCard from "@/components/ui/ProjectCard";
 import { Link } from "@/i18n/navigation";
 import type { Metadata } from "next";
 
 interface Props {
-  params: Promise<{ slug: string }>;
+  params: Promise<{ slug: string; locale: string }>;
 }
 
 export async function generateStaticParams() {
@@ -369,11 +369,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default async function ServiceDetailPage({ params }: Props) {
-  const { slug } = await params;
+  const { slug, locale } = await params;
+  setRequestLocale(locale);
+
   const data = serviceData[slug];
   if (!data) notFound();
 
-  const locale = await getLocale();
   const allProjects = getProjects();
   const related = allProjects
     .filter((p) => p.frontmatter.category === data.category)
