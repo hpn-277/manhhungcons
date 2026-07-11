@@ -2,15 +2,21 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import type { Metadata } from "next";
 import { services as defaultServices } from "@/lib/services";
-
-export const metadata: Metadata = {
-  title: "Dịch Vụ",
-  description:
-    "Dịch vụ thi công, xây dựng nhà ở, nhà xưởng công nghiệp, hạ tầng kỹ thuật, sửa chữa bảo trì công trình tại Bà Rịa - Vũng Tàu.",
-};
+import { localizedMetadata } from "@/lib/site";
 
 interface Props {
   params: Promise<{ locale: string }>;
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const isEn = locale === "en";
+  return localizedMetadata(locale, "/dich-vu", {
+    title: isEn ? "Services" : "Dịch Vụ",
+    description: isEn
+      ? "Factory construction, residential building, technical infrastructure, and maintenance/repair services in Ba Ria - Vung Tau."
+      : "Dịch vụ thi công, xây dựng nhà ở, nhà xưởng công nghiệp, hạ tầng kỹ thuật, sửa chữa bảo trì công trình tại Bà Rịa - Vũng Tàu.",
+  });
 }
 
 export default async function ServicesPage({ params }: Props) {

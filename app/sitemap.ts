@@ -2,20 +2,13 @@ import type { MetadataRoute } from "next";
 import { getProjects, getBlogPosts } from "@/lib/content";
 import { services } from "@/lib/services";
 import { routing } from "@/i18n/routing";
-import { SITE_URL } from "@/lib/site";
+import { SITE_URL, localePath } from "@/lib/site";
 
 const LOCALES = routing.locales;
 
 type ChangeFrequency = NonNullable<
   MetadataRoute.Sitemap[number]["changeFrequency"]
 >;
-
-// Default locale ("vi") has no URL prefix (localePrefix: "as-needed"); only
-// non-default locales are prefixed, e.g. "/en".
-function localePath(locale: string, path: string): string {
-  if (locale === routing.defaultLocale) return path === "" ? "/" : path;
-  return `/${locale}${path}`;
-}
 
 function localizedEntry(
   path: string,

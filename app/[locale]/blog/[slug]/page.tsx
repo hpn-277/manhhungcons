@@ -4,6 +4,7 @@ import { getBlogPost, getBlogPosts } from "@/lib/content";
 import { Link } from "@/i18n/navigation";
 import type { Metadata } from "next";
 import { marked } from "marked";
+import { localizedMetadata } from "@/lib/site";
 
 interface Props {
   params: Promise<{ slug: string; locale: string }>;
@@ -16,10 +17,17 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { slug } = await params;
+  const { slug, locale } = await params;
   const post = getBlogPost(slug);
   if (!post) return {};
-  return { title: post.frontmatter.title };
+  const isEn = locale === "en";
+  const { title, titleEn, excerpt, excerptEn } = post.frontmatter;
+  const resolvedTitle = isEn ? titleEn || title : title;
+  const description = (isEn ? excerptEn || excerpt : excerpt)?.slice(0, 160);
+  return localizedMetadata(locale, `/blog/${slug}`, {
+    title: resolvedTitle,
+    description,
+  });
 }
 
 export default async function BlogPostPage({ params }: Props) {

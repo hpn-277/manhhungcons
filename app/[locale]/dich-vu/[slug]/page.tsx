@@ -4,6 +4,7 @@ import { getService, getServices, getProjects } from "@/lib/content";
 import ProjectCard from "@/components/ui/ProjectCard";
 import { Link } from "@/i18n/navigation";
 import type { Metadata } from "next";
+import { localizedMetadata } from "@/lib/site";
 
 interface Props {
   params: Promise<{ slug: string; locale: string }>;
@@ -361,11 +362,16 @@ const serviceData: Record<string, ServiceContent> = {
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { slug } = await params;
+  const { slug, locale } = await params;
   const data = serviceData[slug];
   if (!data) return { title: slug };
-  const description = `${data.title} tại Bà Rịa - Vũng Tàu. ${data.intro}`.slice(0, 160);
-  return { title: data.title, description };
+  const isEn = locale === "en";
+  const title = isEn ? data.titleEn : data.title;
+  const intro = isEn ? data.introEn : data.intro;
+  const description = isEn
+    ? `${title} in Ba Ria - Vung Tau. ${intro}`.slice(0, 160)
+    : `${title} tại Bà Rịa - Vũng Tàu. ${intro}`.slice(0, 160);
+  return localizedMetadata(locale, `/dich-vu/${slug}`, { title, description });
 }
 
 export default async function ServiceDetailPage({ params }: Props) {

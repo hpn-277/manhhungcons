@@ -6,6 +6,7 @@ import { Link } from "@/i18n/navigation";
 import ProjectCard from "@/components/ui/ProjectCard";
 import ProjectCarousel from "@/components/ui/ProjectCarousel";
 import type { Metadata } from "next";
+import { localizedMetadata } from "@/lib/site";
 
 interface Props {
   params: Promise<{ slug: string; locale: string }>;
@@ -20,12 +21,19 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { slug } = await params;
+  const { slug, locale } = await params;
   const project = getProject(slug);
   if (!project) return {};
-  const { title, location, excerpt } = project.frontmatter;
-  const description = `${title} tại ${location}. ${excerpt}`.slice(0, 160);
-  return { title, description };
+  const isEn = locale === "en";
+  const { title, titleEn, location, excerpt, excerptEn } = project.frontmatter;
+  const resolvedTitle = isEn ? titleEn || title : title;
+  const description = isEn
+    ? `${resolvedTitle} in ${location}. ${excerptEn || excerpt}`.slice(0, 160)
+    : `${resolvedTitle} tại ${location}. ${excerpt}`.slice(0, 160);
+  return localizedMetadata(locale, `/project/${slug}`, {
+    title: resolvedTitle,
+    description,
+  });
 }
 
 export default async function ProjectDetailPage({ params }: Props) {

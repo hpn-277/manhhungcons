@@ -1,15 +1,21 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import type { Metadata } from "next";
 import ContactForm from "@/components/ui/ContactForm";
-
-export const metadata: Metadata = {
-  title: "Liên Hệ",
-  description:
-    "Liên hệ Xây Dựng Mạnh Hùng để được tư vấn, báo giá dịch vụ thi công, xây dựng nhà ở, nhà xưởng tại Bà Rịa - Vũng Tàu.",
-};
+import { localizedMetadata } from "@/lib/site";
 
 interface Props {
   params: Promise<{ locale: string }>;
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const isEn = locale === "en";
+  return localizedMetadata(locale, "/lien-he", {
+    title: isEn ? "Contact" : "Liên Hệ",
+    description: isEn
+      ? "Contact Manh Hung Construction for a consultation and quote on construction, factory, and residential building services in Ba Ria - Vung Tau."
+      : "Liên hệ Xây Dựng Mạnh Hùng để được tư vấn, báo giá dịch vụ thi công, xây dựng nhà ở, nhà xưởng tại Bà Rịa - Vũng Tàu.",
+  });
 }
 
 export default async function ContactPage({ params }: Props) {

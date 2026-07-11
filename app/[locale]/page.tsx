@@ -9,9 +9,31 @@ import ProjectCard from "@/components/ui/ProjectCard";
 import ServiceCard from "@/components/ui/ServiceCard";
 import { getProjects } from "@/lib/content";
 import { services } from "@/lib/services";
+import type { Metadata } from "next";
+import { localizedMetadata } from "@/lib/site";
 
 interface Props {
   params: Promise<{ locale: string }>;
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const isEn = locale === "en";
+  return {
+    ...localizedMetadata(locale, "", {
+      title: isEn
+        ? "Factory & Residential Construction in Ba Ria - Vung Tau"
+        : "Xây Dựng Nhà Xưởng, Nhà Ở Trọn Gói Tại Bà Rịa - Vũng Tàu",
+      description: isEn
+        ? "Manh Hung Construction Co., Ltd. - Design and build factories, prefabricated steel structures, homes, and villas in Ba Ria - Vung Tau. 15+ years of experience."
+        : "Công Ty TNHH Xây Dựng Mạnh Hùng - Thi công, thiết kế nhà xưởng công nghiệp, nhà thép tiền chế, nhà ở, biệt thự trọn gói tại Bà Rịa - Vũng Tàu. Hơn 15 năm kinh nghiệm.",
+    }),
+    title: {
+      absolute: isEn
+        ? "Factory & Residential Construction in Ba Ria - Vung Tau | Manh Hung Construction"
+        : "Xây Dựng Nhà Xưởng, Nhà Ở Trọn Gói Tại Bà Rịa - Vũng Tàu | Xây Dựng Mạnh Hùng",
+    },
+  };
 }
 
 export default async function HomePage({ params }: Props) {

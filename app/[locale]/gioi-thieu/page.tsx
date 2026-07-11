@@ -1,11 +1,17 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import type { Metadata } from "next";
+import { localizedMetadata } from "@/lib/site";
 
-export const metadata: Metadata = {
-  title: "Giới Thiệu",
-  description:
-    "Công Ty TNHH Xây Dựng Mạnh Hùng - Hơn 15 năm kinh nghiệm thi công, xây dựng nhà ở, nhà xưởng công nghiệp tại Bà Rịa - Vũng Tàu.",
-};
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const isEn = locale === "en";
+  return localizedMetadata(locale, "/gioi-thieu", {
+    title: isEn ? "About Us" : "Giới Thiệu",
+    description: isEn
+      ? "Manh Hung Construction Co., Ltd. - Over 15 years building homes and industrial factories in Ba Ria - Vung Tau."
+      : "Công Ty TNHH Xây Dựng Mạnh Hùng - Hơn 15 năm kinh nghiệm thi công, xây dựng nhà ở, nhà xưởng công nghiệp tại Bà Rịa - Vũng Tàu.",
+  });
+}
 
 const timeline = [
   { year: "2009", event: "Thành lập Công Ty TNHH Xây Dựng Mạnh Hùng tại Bà Rịa - Vũng Tàu", eventEn: "Founded Manh Hung Construction Co., Ltd. in Ba Ria - Vung Tau" },

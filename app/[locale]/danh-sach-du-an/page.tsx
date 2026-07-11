@@ -2,15 +2,21 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { getProjects } from "@/lib/content";
 import ProjectsFilter from "@/components/ui/ProjectsFilter";
 import type { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "Công Trình Đã Thực Hiện",
-  description:
-    "Các công trình thi công, xây dựng nhà ở, nhà xưởng, hạ tầng kỹ thuật tiêu biểu của Mạnh Hùng tại Bà Rịa - Vũng Tàu.",
-};
+import { localizedMetadata } from "@/lib/site";
 
 interface Props {
   params: Promise<{ locale: string }>;
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const isEn = locale === "en";
+  return localizedMetadata(locale, "/danh-sach-du-an", {
+    title: isEn ? "Completed Projects" : "Công Trình Đã Thực Hiện",
+    description: isEn
+      ? "Featured factory, residential, and infrastructure construction projects by Manh Hung in Ba Ria - Vung Tau."
+      : "Các công trình thi công, xây dựng nhà ở, nhà xưởng, hạ tầng kỹ thuật tiêu biểu của Mạnh Hùng tại Bà Rịa - Vũng Tàu.",
+  });
 }
 
 export default async function ProjectsPage({ params }: Props) {
