@@ -88,7 +88,7 @@ export default async function BlogPostPage({ params }: Props) {
                 <h4 className="font-bold text-gray-900 mb-2 text-sm">{t("consultTitle")}</h4>
                 <Link
                   href="/lien-he"
-                  className="block text-center bg-orange-500 text-white text-sm font-semibold py-2 rounded-lg hover:bg-orange-600 transition-colors"
+                  className="block text-center bg-orange-700 text-white text-sm font-semibold py-2 rounded-lg hover:bg-orange-800 transition-colors"
                 >
                   {t("contactButton")}
                 </Link>

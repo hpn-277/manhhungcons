@@ -33,7 +33,7 @@ export default function ProjectCard({ slug, frontmatter }: Props) {
         )}
         <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-300" />
         <div className="absolute top-3 left-3">
-          <span className="bg-orange-500 text-white text-xs font-semibold px-2 py-1 rounded">
+          <span className="bg-orange-700 text-white text-xs font-semibold px-2 py-1 rounded">
             {catLabel}
           </span>
         </div>

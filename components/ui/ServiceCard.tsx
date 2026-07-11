@@ -32,7 +32,7 @@ export default function ServiceCard({ slug, frontmatter }: Props) {
       <p className="text-gray-500 text-sm leading-relaxed mb-4 line-clamp-3">{excerpt}</p>
       <Link
         href={`/dich-vu/${slug}`}
-        className="inline-flex items-center gap-1 text-sm font-semibold text-orange-500 hover:text-orange-600 transition-colors"
+        className="inline-flex items-center gap-1 text-sm font-semibold text-orange-700 hover:text-orange-800 transition-colors"
       >
         {t("learnMore")} →
       </Link>

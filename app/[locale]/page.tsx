@@ -91,7 +91,7 @@ export default async function HomePage({ params }: Props) {
             </div>
             <Link
               href="/danh-sach-du-an"
-              className="text-orange-500 hover:text-orange-600 font-semibold text-sm whitespace-nowrap"
+              className="text-orange-700 hover:text-orange-800 font-semibold text-sm whitespace-nowrap"
             >
               {t("viewAll")}
             </Link>
@@ -115,7 +115,7 @@ export default async function HomePage({ params }: Props) {
       <Clients />
 
       {/* CTA Banner */}
-      <section className="py-20 bg-orange-500">
+      <section className="py-20 bg-orange-700">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 text-center">
           <h2 className="text-3xl lg:text-4xl font-black text-white mb-3">
             {t("ctaBanner")}
@@ -123,7 +123,7 @@ export default async function HomePage({ params }: Props) {
           <p className="text-orange-100 mb-8 text-lg">{t("ctaDesc")}</p>
           <Link
             href="/lien-he"
-            className="inline-block bg-white text-orange-500 hover:bg-orange-50 font-bold text-lg px-10 py-4 rounded-xl transition-colors shadow-lg"
+            className="inline-block bg-white text-orange-700 hover:bg-orange-50 font-bold text-lg px-10 py-4 rounded-xl transition-colors shadow-lg"
           >
             {t("ctaButton")}
           </Link>

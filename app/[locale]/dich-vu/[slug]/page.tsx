@@ -410,7 +410,7 @@ export default async function ServiceDetailPage({ params }: Props) {
 
       {/* Pricing badge */}
       {data.pricing && (
-        <div className="bg-orange-500">
+        <div className="bg-orange-700">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 py-5 flex flex-col sm:flex-row items-start sm:items-center gap-2">
             <div className="text-white">
               <span className="text-sm font-semibold uppercase tracking-wider opacity-80">
@@ -438,7 +438,7 @@ export default async function ServiceDetailPage({ params }: Props) {
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                 {(isEn ? section.itemsEn : section.items).map((item) => (
                   <li key={item} className="flex items-start gap-2 text-gray-700 text-sm">
-                    <span className="text-orange-500 mt-0.5 shrink-0">✓</span>
+                    <span className="text-orange-700 mt-0.5 shrink-0">✓</span>
                     {item}
                   </li>
                 ))}
@@ -542,7 +542,7 @@ export default async function ServiceDetailPage({ params }: Props) {
             <ul className="space-y-3">
               {(isEn ? data.warranty.itemsEn : data.warranty.items).map((item) => (
                 <li key={item} className="flex items-start gap-3">
-                  <span className="text-orange-500 shrink-0 mt-0.5">✓</span>
+                  <span className="text-orange-700 shrink-0 mt-0.5">✓</span>
                   <span className="text-gray-700">{item}</span>
                 </li>
               ))}
@@ -574,7 +574,7 @@ export default async function ServiceDetailPage({ params }: Props) {
             </p>
             <Link
               href="/lien-he"
-              className="inline-block bg-orange-500 hover:bg-orange-600 text-white font-bold px-6 py-3 rounded-lg transition-colors"
+              className="inline-block bg-orange-700 hover:bg-orange-800 text-white font-bold px-6 py-3 rounded-lg transition-colors"
             >
               {isEn ? "Contact Us →" : "Liên Hệ Ngay →"}
             </Link>

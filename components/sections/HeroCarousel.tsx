@@ -78,7 +78,7 @@ export default function HeroCarousel() {
           <div className="flex flex-wrap gap-4 justify-center">
             <Link
               href="/danh-sach-du-an"
-              className="bg-orange-500 hover:bg-orange-600 text-white font-bold px-8 py-3 rounded-lg transition-colors"
+              className="bg-orange-700 hover:bg-orange-800 text-white font-bold px-8 py-3 rounded-lg transition-colors"
             >
               {t("viewProjects")}
             </Link>
@@ -93,14 +93,20 @@ export default function HeroCarousel() {
       </div>
 
       {/* Slide dots */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-2 z-10">
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-4 z-10">
         {slides.map((_, i) => (
           <button
             key={i}
             onClick={() => setCurrent(i)}
-            className={`w-2 h-2 rounded-full transition-all ${i === current ? "bg-orange-500 w-6" : "bg-white/40 hover:bg-white/70"
-              }`}
-          />
+            aria-label={`Slide ${i + 1}`}
+            aria-current={i === current}
+            className="p-2 -m-2"
+          >
+            <span
+              className={`block h-2 rounded-full transition-all ${i === current ? "bg-orange-500 w-6" : "bg-white/40 hover:bg-white/70 w-2"
+                }`}
+            />
+          </button>
         ))}
       </div>
     </section>

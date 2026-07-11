@@ -39,7 +39,7 @@ function Stat({ value, suffix, label }: { value: number; suffix: string; label: 
   const { count, ref } = useCountUp(value);
   return (
     <div ref={ref} className="text-center">
-      <div className="text-4xl lg:text-5xl font-black text-orange-500">
+      <div className="text-4xl lg:text-5xl font-black text-orange-600">
         {count}{suffix}
       </div>
       <div className="text-gray-600 mt-2 font-medium">{label}</div>

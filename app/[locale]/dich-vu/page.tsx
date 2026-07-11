@@ -58,7 +58,7 @@ export default async function ServicesPage({ params }: Props) {
                 <div className="px-6 pb-5 mt-auto">
                   <Link
                     href={`/dich-vu/${svc.slug}`}
-                    className="inline-flex items-center gap-1 text-sm font-semibold text-orange-500 hover:text-orange-600 transition-colors"
+                    className="inline-flex items-center gap-1 text-sm font-semibold text-orange-700 hover:text-orange-800 transition-colors"
                   >
                     {t("learnMore")} →
                   </Link>
@@ -80,7 +80,7 @@ export default async function ServicesPage({ params }: Props) {
           </p>
           <Link
             href="/lien-he"
-            className="inline-block bg-orange-500 hover:bg-orange-600 text-white font-bold px-8 py-3 rounded-lg transition-colors"
+            className="inline-block bg-orange-700 hover:bg-orange-800 text-white font-bold px-8 py-3 rounded-lg transition-colors"
           >
             {t("requestQuote")}
           </Link>

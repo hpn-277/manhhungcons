@@ -75,7 +75,7 @@ export default function Navbar() {
         <div className="flex items-center gap-3">
           <Link
             href="/lien-he"
-            className="hidden lg:block bg-orange-500 hover:bg-orange-600 text-white text-sm font-semibold px-4 py-2 rounded transition-colors"
+            className="hidden lg:block bg-orange-700 hover:bg-orange-800 text-white text-sm font-semibold px-4 py-2 rounded transition-colors"
           >
             {t("getQuote")}
           </Link>
@@ -109,7 +109,7 @@ export default function Navbar() {
             ))}
             <Link
               href="/lien-he"
-              className="mt-3 bg-orange-500 text-white text-center font-semibold py-2 rounded hover:bg-orange-600 transition-colors"
+              className="mt-3 bg-orange-700 text-white text-center font-semibold py-2 rounded hover:bg-orange-800 transition-colors"
               onClick={() => setMobileOpen(false)}
             >
               {t("getQuote")}

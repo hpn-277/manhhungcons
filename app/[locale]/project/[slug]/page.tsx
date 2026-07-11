@@ -70,7 +70,7 @@ export default async function ProjectDetailPage({ params }: Props) {
         <div className="absolute inset-0 hero-overlay" />
         <div className="absolute inset-0 flex items-end">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 pb-10 w-full">
-            <span className="bg-orange-500 text-white text-xs font-semibold px-3 py-1 rounded mb-3 inline-block">
+            <span className="bg-orange-700 text-white text-xs font-semibold px-3 py-1 rounded mb-3 inline-block">
               {categoryLabel}
             </span>
             <h1 className="text-3xl lg:text-4xl font-black text-white">{title}</h1>
@@ -139,7 +139,7 @@ export default async function ProjectDetailPage({ params }: Props) {
                 <div className="px-6 py-5 bg-gray-50">
                   <Link
                     href="/lien-he"
-                    className="block w-full bg-orange-500 hover:bg-orange-600 text-white font-bold text-center py-3 rounded-lg transition-colors"
+                    className="block w-full bg-orange-700 hover:bg-orange-800 text-white font-bold text-center py-3 rounded-lg transition-colors"
                   >
                     {t("contactCta")}
                   </Link>

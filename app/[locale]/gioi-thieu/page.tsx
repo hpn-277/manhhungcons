@@ -77,7 +77,7 @@ export default async function AboutPage({ params }: Props) {
             <div className="space-y-8">
               {timeline.map((item) => (
                 <div key={item.year} className="flex gap-6 items-start">
-                  <div className="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center text-white font-black text-sm shrink-0 z-10">
+                  <div className="w-16 h-16 bg-orange-700 rounded-full flex items-center justify-center text-white font-black text-sm shrink-0 z-10">
                     {item.year}
                   </div>
                   <div className="pt-4">

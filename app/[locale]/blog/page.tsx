@@ -52,7 +52,7 @@ export default async function BlogPage({ params }: Props) {
                     <p className="text-gray-500 text-sm line-clamp-3 mb-3">{excerpt}</p>
                     <Link
                       href={`/blog/${post.slug}`}
-                      className="text-sm font-semibold text-orange-500 hover:text-orange-600 transition-colors"
+                      className="text-sm font-semibold text-orange-700 hover:text-orange-800 transition-colors"
                     >
                       {t("readMore")} →
                     </Link>

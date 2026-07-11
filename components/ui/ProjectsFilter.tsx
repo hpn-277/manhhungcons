@@ -65,7 +65,7 @@ export default function ProjectsFilter({ projects }: Props) {
               key={cat}
               onClick={() => handleCategory(cat)}
               className={`px-4 py-2 rounded-full text-sm font-semibold transition-colors flex items-center gap-1.5 ${category === cat
-                ? "bg-orange-500 text-white"
+                ? "bg-orange-700 text-white"
                 : "bg-gray-100 text-gray-700 hover:bg-gray-200"
                 }`}
             >

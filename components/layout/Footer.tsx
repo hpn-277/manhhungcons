@@ -40,6 +40,7 @@ export default function Footer() {
               href="https://www.facebook.com/manhhungconstructor"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Facebook"
               className="w-9 h-9 bg-blue-600 rounded flex items-center justify-center text-white hover:bg-blue-700 transition-colors"
             >
               <FaFacebook size={20} />
@@ -76,11 +77,11 @@ export default function Footer() {
               <MdLocationOn className="text-orange-500 mt-0.5 shrink-0" size={18} />
               <div className="space-y-1">
                 <div>
-                  <span className="text-gray-500 text-xs uppercase tracking-wide">{t("taxAddressLabel")}</span>
+                  <span className="text-gray-400 text-xs uppercase tracking-wide">{t("taxAddressLabel")}</span>
                   <p>107B Khu phố Chu Hải, Phường Tân Hải, TP Hồ Chí Minh, Việt Nam</p>
                 </div>
                 <div>
-                  <span className="text-gray-500 text-xs uppercase tracking-wide">{t("officeAddressLabel")}</span>
+                  <span className="text-gray-400 text-xs uppercase tracking-wide">{t("officeAddressLabel")}</span>
                   <p>107B Khu phố Chu Hải, Phường Tân Hải, Thành Phố Phú Mỹ, Tỉnh Bà Rịa - Vũng Tàu, Việt Nam</p>
                 </div>
               </div>
@@ -106,7 +107,7 @@ export default function Footer() {
       </div>
 
       <div className="border-t border-white/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4 text-center text-xs text-gray-500">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4 text-center text-xs text-gray-400">
           {t("rights")}
         </div>
       </div>
